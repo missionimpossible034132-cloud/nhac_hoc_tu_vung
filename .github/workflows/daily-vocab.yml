@@ -1,0 +1,26 @@
+name: Gửi từ vựng tiếng Trung qua Telegram
+
+on:
+  schedule:
+    # 01:00 UTC = 08:00 giờ Việt Nam. Đổi số giờ nếu muốn gửi vào giờ khác (giờ UTC = giờ VN - 7).
+    - cron: "0 1 * * *"
+  workflow_dispatch: {}   # cho phép vào tab Actions bấm "Run workflow" để test ngay, không cần chờ đến giờ
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Gửi tin nhắn Telegram
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+          WORDS_PER_DAY: "5"
+        run: python send_words.py
