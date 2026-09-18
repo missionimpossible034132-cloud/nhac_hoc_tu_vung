@@ -3,7 +3,12 @@ name: Gửi từ vựng tiếng Trung qua Telegram
 on:
   schedule:
     # 01:00 UTC = 08:00 giờ Việt Nam. Đổi số giờ nếu muốn gửi vào giờ khác (giờ UTC = giờ VN - 7).
-    - cron: "0 1 * * *"
+    # 08:00 VN = 01:00 UTC
+    - cron: "0 1 * * 1-6"
+    # 13:00 VN = 06:00 UTC
+    - cron: "0 6 * * 1-6"
+    # 19:00 VN = 12:00 UTC
+    - cron: "0 12 * * 1-6" 
   workflow_dispatch: {}   # cho phép vào tab Actions bấm "Run workflow" để test ngay, không cần chờ đến giờ
 
 jobs:
