@@ -1,1227 +1,1231 @@
-[
-  {
-    "hz": "季节",
-    "py": "jìjié",
-    "vi": "Mùa; một phần của năm"
-  },
-  {
-    "hz": "春天",
-    "py": "chūntiān",
-    "vi": "Mùa xuân"
-  },
-  {
-    "hz": "夏天",
-    "py": "xiàtiān",
-    "vi": "Mùa hè"
-  },
-  {
-    "hz": "秋天",
-    "py": "qiūtiān",
-    "vi": "Mùa thu"
-  },
-  {
-    "hz": "冬天",
-    "py": "dōngtiān",
-    "vi": "Mùa đông"
-  },
-  {
-    "hz": "太阳",
-    "py": "tàiyáng",
-    "vi": "Mặt trời"
-  },
-  {
-    "hz": "刮风",
-    "py": "guā fēng",
-    "vi": "Có gió; gió thổi"
-  },
-  {
-    "hz": "月亮",
-    "py": "yuèliang",
-    "vi": "Mặt trăng"
-  },
-  {
-    "hz": "雨伞",
-    "py": "yǔsǎn",
-    "vi": "Ô; dù"
-  },
-  {
-    "hz": "机会",
-    "py": "jīhuì",
-    "vi": "Cơ hội; dịp thuận lợi"
-  },
-  {
-    "hz": "舒服",
-    "py": "shūfu",
-    "vi": "Thoải mái; cảm thấy khỏe"
-  },
-  {
-    "hz": "感冒",
-    "py": "gǎnmào",
-    "vi": "Bị cảm lạnh"
-  },
-  {
-    "hz": "发烧",
-    "py": "fāshāo",
-    "vi": "Bị sốt"
-  },
-  {
-    "hz": "检查",
-    "py": "jiǎnchá",
-    "vi": "Kiểm tra; khám, đặc biệt trong ngữ cảnh y tế"
-  },
-  {
-    "hz": "健康",
-    "py": "jiànkāng",
-    "vi": "Khỏe mạnh; sức khỏe"
-  },
-  {
-    "hz": "担心",
-    "py": "dānxīn",
-    "vi": "Lo lắng"
-  },
-  {
-    "hz": "最近",
-    "py": "zuìjìn",
-    "vi": "Gần đây; dạo này"
-  },
-  {
-    "hz": "疼",
-    "py": "téng",
-    "vi": "Đau; nhức"
-  },
-  {
-    "hz": "头",
-    "py": "tóu",
-    "vi": "Đầu"
-  },
-  {
-    "hz": "久",
-    "py": "jiǔ",
-    "vi": "Lâu, chỉ khoảng thời gian dài"
-  },
-  {
-    "hz": "片",
-    "py": "piàn",
-    "vi": "Lượng từ cho viên thuốc, lát hoặc vật mỏng, phẳng"
-  },
-  {
-    "hz": "种",
-    "py": "zhǒng",
-    "vi": "Loại; kiểu; chủng loại"
-  },
-  {
-    "hz": "带",
-    "py": "dài",
-    "vi": "mang; đem theo"
-  },
-  {
-    "hz": "搬",
-    "py": "bān",
-    "vi": "chuyển; di chuyển"
-  },
-  {
-    "hz": "脸",
-    "py": "liǎn",
-    "vi": "mặt"
-  },
-  {
-    "hz": "安静",
-    "py": "ānjìng",
-    "vi": "yên tĩnh; thanh bình"
-  },
-  {
-    "hz": "阿姨",
-    "py": "āyí",
-    "vi": "dì; cách xưng hô lịch sự với phụ nữ trung niên"
-  },
-  {
-    "hz": "帮忙",
-    "py": "bāngmáng",
-    "vi": "giúp đỡ"
-  },
-  {
-    "hz": "需要",
-    "py": "xūyào",
-    "vi": "cần"
-  },
-  {
-    "hz": "热情",
-    "py": "rèqíng",
-    "vi": "nhiệt tình; niềm nở"
-  },
-  {
-    "hz": "以后",
-    "py": "yǐhòu",
-    "vi": "sau này; sau khi"
-  },
-  {
-    "hz": "行李箱",
-    "py": "xínglǐxiāng",
-    "vi": "vali"
-  },
-  {
-    "hz": "其他",
-    "py": "qítā",
-    "vi": "khác; những người/vật khác"
-  },
-  {
-    "hz": "见面",
-    "py": "jiànmiàn",
-    "vi": "gặp mặt"
-  },
-  {
-    "hz": "结婚",
-    "py": "jiéhūn",
-    "vi": "kết hôn"
-  },
-  {
-    "hz": "洗澡",
-    "py": "xǐzǎo",
-    "vi": "tắm"
-  },
-  {
-    "hz": "借",
-    "py": "jiè",
-    "vi": "mượn; cho mượn"
-  },
-  {
-    "hz": "世界",
-    "py": "shìjiè",
-    "vi": "thế giới"
-  },
-  {
-    "hz": "历史",
-    "py": "lìshǐ",
-    "vi": "lịch sử"
-  },
-  {
-    "hz": "数学",
-    "py": "shùxué",
-    "vi": "toán học"
-  },
-  {
-    "hz": "体育",
-    "py": "tǐyù",
-    "vi": "thể dục; thể thao"
-  },
-  {
-    "hz": "文化",
-    "py": "wénhuà",
-    "vi": "văn hóa"
-  },
-  {
-    "hz": "发现",
-    "py": "fāxiàn",
-    "vi": "phát hiện; nhận ra"
-  },
-  {
-    "hz": "认真",
-    "py": "rènzhēn",
-    "vi": "nghiêm túc; chăm chỉ; cần cù"
-  },
-  {
-    "hz": "完成",
-    "py": "wánchéng",
-    "vi": "hoàn thành; kết thúc"
-  },
-  {
-    "hz": "作业",
-    "py": "zuòyè",
-    "vi": "bài tập về nhà"
-  },
-  {
-    "hz": "了解",
-    "py": "liǎojiě",
-    "vi": "hiểu; tìm hiểu về"
-  },
-  {
-    "hz": "辆",
-    "py": "liàng",
-    "vi": "lượng từ dùng cho phương tiện"
-  },
-  {
-    "hz": "楼",
-    "py": "lóu",
-    "vi": "tòa nhà; tầng của một tòa nhà"
-  },
-  {
-    "hz": "发",
-    "py": "fā",
-    "vi": "gửi; phát; chuyển"
-  },
-  {
-    "hz": "会议",
-    "py": "huìyì",
-    "vi": "cuộc họp; hội nghị"
-  },
-  {
-    "hz": "周末",
-    "py": "zhōumò",
-    "vi": "cuối tuần"
-  },
-  {
-    "hz": "花园",
-    "py": "huāyuán",
-    "vi": "vườn"
-  },
-  {
-    "hz": "超市",
-    "py": "chāoshì",
-    "vi": "siêu thị"
-  },
-  {
-    "hz": "同事",
-    "py": "tóngshì",
-    "vi": "đồng nghiệp"
-  },
-  {
-    "hz": "经理",
-    "py": "jīnglǐ",
-    "vi": "quản lý; giám đốc"
-  },
-  {
-    "hz": "电梯",
-    "py": "diàntī",
-    "vi": "thang máy"
-  },
-  {
-    "hz": "办公室",
-    "py": "bàngōngshì",
-    "vi": "văn phòng"
-  },
-  {
-    "hz": "电子邮箱",
-    "py": "diànzǐ yóuxiāng",
-    "vi": "email; hộp thư điện tử"
-  },
-  {
-    "hz": "胖",
-    "py": "pàng",
-    "vi": "Béo, thừa cân"
-  },
-  {
-    "hz": "瘦",
-    "py": "shòu",
-    "vi": "Gầy; trái nghĩa với 胖"
-  },
-  {
-    "hz": "米",
-    "py": "mǐ",
-    "vi": "Mét; dùng để biểu thị độ dài"
-  },
-  {
-    "hz": "个子",
-    "py": "gèzi",
-    "vi": "Chiều cao, vóc dáng"
-  },
-  {
-    "hz": "矮",
-    "py": "ǎi",
-    "vi": "Thấp, lùn về chiều cao"
-  },
-  {
-    "hz": "鼻子",
-    "py": "bízi",
-    "vi": "Mũi"
-  },
-  {
-    "hz": "耳朵",
-    "py": "ěrduo",
-    "vi": "Tai"
-  },
-  {
-    "hz": "腿",
-    "py": "tuǐ",
-    "vi": "Chân"
-  },
-  {
-    "hz": "脚",
-    "py": "jiǎo",
-    "vi": "Bàn chân"
-  },
-  {
-    "hz": "头发",
-    "py": "tóufa",
-    "vi": "Tóc"
-  },
-  {
-    "hz": "嘴",
-    "py": "zuǐ",
-    "vi": "Miệng"
-  },
-  {
-    "hz": "甜",
-    "py": "tián",
-    "vi": "Ngọt"
-  },
-  {
-    "hz": "爬山",
-    "py": "páshān",
-    "vi": "Leo núi, đi bộ đường núi"
-  },
-  {
-    "hz": "怎么办",
-    "py": "zěnme bàn",
-    "vi": "Phải làm sao, nên xử lý thế nào"
-  },
-  {
-    "hz": "站",
-    "py": "zhàn",
-    "vi": "Đứng; trạm, bến"
-  },
-  {
-    "hz": "音乐",
-    "py": "yīnyuè",
-    "vi": "Âm nhạc"
-  },
-  {
-    "hz": "参加",
-    "py": "cānjiā",
-    "vi": "Tham gia; tham dự"
-  },
-  {
-    "hz": "比赛",
-    "py": "bǐsài",
-    "vi": "Cuộc thi, trận đấu; thi đấu"
-  },
-  {
-    "hz": "讲",
-    "py": "jiǎng",
-    "vi": "Nói; giải thích; giảng"
-  },
-  {
-    "hz": "骑",
-    "py": "qí",
-    "vi": "Cưỡi; đi bằng phương tiện như xe đạp, xe máy"
-  },
-  {
-    "hz": "聊天",
-    "py": "liáotiān",
-    "vi": "Tán gẫu; trò chuyện"
-  },
-  {
-    "hz": "上网",
-    "py": "shàngwǎng",
-    "vi": "Lên mạng; sử dụng Internet"
-  },
-  {
-    "hz": "说话",
-    "py": "shuōhuà",
-    "vi": "Nói; nói chuyện"
-  },
-  {
-    "hz": "抱",
-    "py": "bào",
-    "vi": "Ôm; bế, giữ trong vòng tay"
-  },
-  {
-    "hz": "画",
-    "py": "huà",
-    "vi": "Vẽ; tranh, bức vẽ"
-  },
-  {
-    "hz": "结束",
-    "py": "jiéshù",
-    "vi": "Kết thúc; hoàn thành"
-  },
-  {
-    "hz": "蓝",
-    "py": "lán",
-    "vi": "Màu xanh lam"
-  },
-  {
-    "hz": "告诉",
-    "py": "gàosu",
-    "vi": "Nói cho; báo cho ai biết"
-  },
-  {
-    "hz": "聊天儿",
-    "py": "liáotiānr",
-    "vi": "Tán gẫu; trò chuyện"
-  },
-  {
-    "hz": "放",
-    "py": "fàng",
-    "vi": "đặt; để"
-  },
-  {
-    "hz": "条",
-    "py": "tiáo",
-    "vi": "dùng cho vật dài, mảnh, mềm hoặc linh hoạt như váy, đường, cá"
-  },
-  {
-    "hz": "花",
-    "py": "huā",
-    "vi": "tiêu; dành (tiền hoặc thời gian)"
-  },
-  {
-    "hz": "角",
-    "py": "jiǎo",
-    "vi": "một đơn vị tiền tệ, bằng 1/10 yuan"
-  },
-  {
-    "hz": "鞋",
-    "py": "xié",
-    "vi": "giày"
-  },
-  {
-    "hz": "双",
-    "py": "shuāng",
-    "vi": "đôi; cặp"
-  },
-  {
-    "hz": "张",
-    "py": "zhāng",
-    "vi": "dùng cho vật phẳng như giấy, bàn, ảnh"
-  },
-  {
-    "hz": "把",
-    "py": "bǎ",
-    "vi": "dùng cho đồ vật có tay cầm"
-  },
-  {
-    "hz": "裙子",
-    "py": "qúnzi",
-    "vi": "váy"
-  },
-  {
-    "hz": "裤子",
-    "py": "kùzi",
-    "vi": "quần"
-  },
-  {
-    "hz": "衬衫",
-    "py": "chènshān",
-    "vi": "áo sơ mi"
-  },
-  {
-    "hz": "冰箱",
-    "py": "bīngxiāng",
-    "vi": "tủ lạnh"
-  },
-  {
-    "hz": "蛋糕",
-    "py": "dàngāo",
-    "vi": "bánh ngọt; bánh kem"
-  },
-  {
-    "hz": "果汁",
-    "py": "guǒzhī",
-    "vi": "nước ép trái cây"
-  },
-  {
-    "hz": "客人",
-    "py": "kèrén",
-    "vi": "khách; khách hàng"
-  },
-  {
-    "hz": "笔记本",
-    "py": "bǐjìběn",
-    "vi": "vở ghi chép; sổ ghi chép"
-  },
-  {
-    "hz": "笔记本电脑",
-    "py": "bǐjìběn diànnǎo",
-    "vi": "máy tính xách tay"
-  },
-  {
-    "hz": "办法",
-    "py": "bànfǎ",
-    "vi": "cách; phương pháp; giải pháp"
-  },
-  {
-    "hz": "重要",
-    "py": "zhòngyào",
-    "vi": "quan trọng"
-  },
-  {
-    "hz": "照相机",
-    "py": "zhàoxiàngjī",
-    "vi": "máy ảnh"
-  },
-  {
-    "hz": "着急",
-    "py": "zháojí",
-    "vi": "lo lắng; sốt ruột; vội"
-  },
-  {
-    "hz": "自己",
-    "py": "zìjǐ",
-    "vi": "bản thân; tự mình"
-  },
-  {
-    "hz": "打算",
-    "py": "dǎsuàn",
-    "vi": "dự định; kế hoạch; dự định làm gì"
-  },
-  {
-    "hz": "换",
-    "py": "huàn",
-    "vi": "thay đổi; đổi; thay thế"
-  },
-  {
-    "hz": "努力",
-    "py": "nǔlì",
-    "vi": "努力 (động từ): nỗ lực, học chăm; 努力 (tính từ): chăm chỉ"
-  },
-  {
-    "hz": "司机",
-    "py": "sījī",
-    "vi": "tài xế; người lái xe"
-  },
-  {
-    "hz": "记得",
-    "py": "jìde",
-    "vi": "Nhớ; vẫn còn nhớ một điều trong trí nhớ"
-  },
-  {
-    "hz": "灯",
-    "py": "dēng",
-    "vi": "Đèn; ánh sáng"
-  },
-  {
-    "hz": "空调",
-    "py": "kōngtiáo",
-    "vi": "Điều hòa; máy điều hòa"
-  },
-  {
-    "hz": "关",
-    "py": "guān",
-    "vi": "Đóng; tắt"
-  },
-  {
-    "hz": "忘记",
-    "py": "wàngjì",
-    "vi": "Quên"
-  },
-  {
-    "hz": "离开",
-    "py": "líkāi",
-    "vi": "Rời khỏi; rời đi"
-  },
-  {
-    "hz": "关心",
-    "py": "guānxīn",
-    "vi": "Quan tâm; lo lắng cho"
-  },
-  {
-    "hz": "低",
-    "py": "dī",
-    "vi": "Thấp"
-  },
-  {
-    "hz": "节目",
-    "py": "jiémù",
-    "vi": "Chương trình; tiết mục; buổi biểu diễn"
-  },
-  {
-    "hz": "礼物",
-    "py": "lǐwù",
-    "vi": "Quà; món quà"
-  },
-  {
-    "hz": "旧",
-    "py": "jiù",
-    "vi": "Cũ; đã qua sử dụng"
-  },
-  {
-    "hz": "决定",
-    "py": "juédìng",
-    "vi": "Quyết định; sự quyết định"
-  },
-  {
-    "hz": "解决",
-    "py": "jiějué",
-    "vi": "Giải quyết"
-  },
-  {
-    "hz": "还",
-    "py": "huán / hái",
-    "vi": "huán: trả lại; hái: vẫn, cũng, thêm nữa"
-  },
-  {
-    "hz": "词典",
-    "py": "cídiǎn",
-    "vi": "từ điển"
-  },
-  {
-    "hz": "铅笔",
-    "py": "qiānbǐ",
-    "vi": "bút chì"
-  },
-  {
-    "hz": "黑板",
-    "py": "hēibǎn",
-    "vi": "bảng đen"
-  },
-  {
-    "hz": "打扫",
-    "py": "dǎsǎo",
-    "vi": "quét dọn, làm vệ sinh"
-  },
-  {
-    "hz": "变",
-    "py": "biàn",
-    "vi": "thay đổi, trở nên"
-  },
-  {
-    "hz": "难",
-    "py": "nán",
-    "vi": "khó"
-  },
-  {
-    "hz": "游戏",
-    "py": "yóuxì",
-    "vi": "trò chơi"
-  },
-  {
-    "hz": "复习",
-    "py": "fùxí",
-    "vi": "ôn tập"
-  },
-  {
-    "hz": "校长",
-    "py": "xiàozhǎng",
-    "vi": "hiệu trưởng"
-  },
-  {
-    "hz": "分",
-    "py": "fēn",
-    "vi": "điểm; phút; chia, phân phát"
-  },
-  {
-    "hz": "年级",
-    "py": "niánjí",
-    "vi": "khối, lớp theo cấp học"
-  },
-  {
-    "hz": "接",
-    "py": "jiē",
-    "vi": "Hán Việt: tiếp. đón; nhận"
-  },
-  {
-    "hz": "必须",
-    "py": "bìxū",
-    "vi": "Hán Việt: tất tu. phải; nhất định phải"
-  },
-  {
-    "hz": "附近",
-    "py": "fùjìn",
-    "vi": "Hán Việt: phụ cận. gần; ở khu vực xung quanh"
-  },
-  {
-    "hz": "银行",
-    "py": "yínháng",
-    "vi": "Hán Việt: ngân hàng. ngân hàng"
-  },
-  {
-    "hz": "信用卡",
-    "py": "xìnyòngkǎ",
-    "vi": "Hán Việt: tín dụng tạp. thẻ tín dụng"
-  },
-  {
-    "hz": "叔叔",
-    "py": "shūshu",
-    "vi": "Hán Việt: thúc thúc. chú; cách gọi kính trọng một người đàn ông lớn tuổi"
-  },
-  {
-    "hz": "地铁",
-    "py": "dìtiě",
-    "vi": "Hán Việt: địa thiết. tàu điện ngầm; metro"
-  },
-  {
-    "hz": "帽子",
-    "py": "màozi",
-    "vi": "Hán Việt: mạo tử. mũ; nón"
-  },
-  {
-    "hz": "绿",
-    "py": "lǜ",
-    "vi": "Hán Việt: lục. xanh lá cây; màu xanh lá cây"
-  },
-  {
-    "hz": "奇怪",
-    "py": "qíguài",
-    "vi": "Hán Việt: kỳ quái. kỳ lạ; khác thường"
-  },
-  {
-    "hz": "层",
-    "py": "céng",
-    "vi": "Hán Việt: tầng. tầng của một tòa nhà"
-  },
-  {
-    "hz": "城市",
-    "py": "chéngshì",
-    "vi": "Hán Việt: thành thị. thành phố"
-  },
-  {
-    "hz": "方便",
-    "py": "fāngbiàn",
-    "vi": "Hán Việt: phương tiện. thuận tiện; tiện lợi"
-  },
-  {
-    "hz": "葡萄",
-    "py": "pútao",
-    "vi": "Hán Việt: bồ đào\nnho"
-  },
-  {
-    "hz": "葡萄汁",
-    "py": "pútao zhī",
-    "vi": "Hán Việt: bồ đào trấp\nnước ép nho"
-  },
-  {
-    "hz": "香蕉",
-    "py": "xiāngjiāo",
-    "vi": "Hán Việt: hương tiêu\nchuối"
-  },
-  {
-    "hz": "最后",
-    "py": "zuìhòu",
-    "vi": "Hán Việt: tối hậu\ncuối cùng; cuối"
-  },
-  {
-    "hz": "洗衣机",
-    "py": "xǐyījī",
-    "vi": "Hán Việt: tẩy y cơ\nmáy giặt"
-  },
-  {
-    "hz": "新鲜",
-    "py": "xīnxiān",
-    "vi": "Hán Việt: tân tiên\ntươi mới"
-  },
-  {
-    "hz": "草",
-    "py": "cǎo",
-    "vi": "Hán Việt: thảo\ncỏ"
-  },
-  {
-    "hz": "环境",
-    "py": "huánjìng",
-    "vi": "Hán Việt: hoàn cảnh\nmôi trường; hoàn cảnh xung quanh"
-  },
-  {
-    "hz": "厨房",
-    "py": "chúfáng",
-    "vi": "Hán Việt: trù phòng\nnhà bếp"
-  },
-  {
-    "hz": "饮料",
-    "py": "yǐnliào",
-    "vi": "Hán Việt: ẩm liệu\nđồ uống"
-  },
-  {
-    "hz": "啤酒",
-    "py": "píjiǔ",
-    "vi": "Hán Việt: bia tửu\nbia"
-  },
-  {
-    "hz": "清楚",
-    "py": "qīngchu",
-    "vi": "Hán Việt: thanh sở\nrõ ràng; rõ; hiểu rõ"
-  },
-  {
-    "hz": "船",
-    "py": "chuán",
-    "vi": "Hán Việt: thuyền\nthuyền; tàu"
-  },
-  {
-    "hz": "刷牙",
-    "py": "shuā yá",
-    "vi": "Hán Việt: soát nha\nđánh răng"
-  },
-  {
-    "hz": "牙刷",
-    "py": "yáshuā",
-    "vi": "Hán Việt: nha soát\nbàn chải đánh răng"
-  },
-  {
-    "hz": "节日",
-    "py": "jiérì",
-    "vi": "Hán Việt:  tiết nhật \n ngày lễ, lễ hội"
-  },
-  {
-    "hz": "饭馆",
-    "py": "fànguǎn",
-    "vi": "Hán Việt:  phạn quán \n nhà hàng, quán ăn nhỏ"
-  },
-  {
-    "hz": "菜单",
-    "py": "càidān",
-    "vi": "Hán Việt:  thái đơn \n thực đơn, menu"
-  },
-  {
-    "hz": "筷子",
-    "py": "kuàizi",
-    "vi": "Hán Việt:  khoái tử \n đũa"
-  },
-  {
-    "hz": "盘子",
-    "py": "pánzi",
-    "vi": "Hán Việt:  bàn tử \n đĩa, cái đĩa"
-  },
-  {
-    "hz": "碗",
-    "py": "wǎn",
-    "vi": "Hán Việt:  oản \n bát; bát/phần đồ ăn đựng trong bát"
-  },
-  {
-    "hz": "渴",
-    "py": "kě",
-    "vi": "Hán Việt:  khát \n khát"
-  },
-  {
-    "hz": "饱",
-    "py": "bǎo",
-    "vi": "Hán Việt:  bão \n no"
-  },
-  {
-    "hz": "口",
-    "py": "kǒu",
-    "vi": "Hán Việt:  khẩu \n miệng; ngụm, miếng"
-  },
-  {
-    "hz": "点",
-    "py": "diǎn",
-    "vi": "Hán Việt:  điểm \n gọi món, gọi đồ ăn/thức uống"
-  },
-  {
-    "hz": "突然",
-    "py": "tūrán",
-    "vi": "Hán Việt:  đột nhiên \n đột ngột; đột nhiên"
-  },
-  {
-    "hz": "明白",
-    "py": "míngbai",
-    "vi": "Hán Việt:  minh bạch \n rõ ràng; hiểu"
-  },
-  {
-    "hz": "哭",
-    "py": "kū",
-    "vi": "Hán Việt: khốc\nKhóc; rơi nước mắt"
-  },
-  {
-    "hz": "用",
-    "py": "yòng",
-    "vi": "Hán Việt: dụng\nDùng; sử dụng"
-  },
-  {
-    "hz": "迟到",
-    "py": "chídào",
-    "vi": "Hán Việt: trì đáo\nĐến muộn; bị trễ"
-  },
-  {
-    "hz": "放心",
-    "py": "fàngxīn",
-    "vi": "Hán Việt: phóng tâm\nYên tâm; không lo lắng"
-  },
-  {
-    "hz": "满意",
-    "py": "mǎnyì",
-    "vi": "Hán Việt: mãn ý\nHài lòng; vừa ý"
-  },
-  {
-    "hz": "影响",
-    "py": "yǐngxiǎng",
-    "vi": "Hán Việt: ảnh hưởng\nẢnh hưởng; tác động"
-  },
-  {
-    "hz": "邻居",
-    "py": "línjū",
-    "vi": "Hán Việt: lân cư\nHàng xóm"
-  },
-  {
-    "hz": "坏",
-    "py": "huài",
-    "vi": "Hán Việt: hoại\nXấu; hỏng"
-  },
-  {
-    "hz": "短",
-    "py": "duǎn",
-    "vi": "Hán Việt: đoản\nNgắn"
-  },
-  {
-    "hz": "难过",
-    "py": "nánguò",
-    "vi": "Hán Việt: nan quá\nBuồn; đau lòng; khó chịu"
-  },
-  {
-    "hz": "注意",
-    "py": "zhùyì",
-    "vi": "Hán Việt: chú ý\nChú ý; để ý"
-  },
-  {
-    "hz": "WeChat (微信)",
-    "py": "Wēixìn",
-    "vi": "Hán Việt: Vi tín\nWeChat; ứng dụng mạng xã hội phổ biến dùng để nhắn tin và giao tiếp"
-  },
-  {
-    "hz": "遇到",
-    "py": "yùdào",
-    "vi": "Hán Việt: Ngộ đáo\nGặp; gặp phải; tình cờ gặp, thường không có chủ ý"
-  },
-  {
-    "hz": "照顾",
-    "py": "zhàogù",
-    "vi": "Hán Việt: Chiếu cố\nChăm sóc; trông nom"
-  },
-  {
-    "hz": "容易",
-    "py": "róngyì",
-    "vi": "Hán Việt: Dung dị\nDễ; có khả năng dễ xảy ra"
-  },
-  {
-    "hz": "北方",
-    "py": "běifāng",
-    "vi": "Hán Việt: Bắc phương\nPhía Bắc; miền Bắc"
-  },
-  {
-    "hz": "以前",
-    "py": "yǐqián",
-    "vi": "Hán Việt: Dĩ tiền\nTrước đây; trước kia; trong quá khứ"
-  },
-  {
-    "hz": "后来",
-    "py": "hòulái",
-    "vi": "Hán Việt: Hậu lai\nSau đó; về sau, chỉ các sự việc đã xảy ra trong quá khứ"
-  },
-  {
-    "hz": "宾馆",
-    "py": "bīnguǎn",
-    "vi": "Hán Việt: Tân quán\nNhà khách; hostel; thường dùng cho khách chính thức hoặc khách của cơ quan/trường học"
-  },
-  {
-    "hz": "航班",
-    "py": "hángbān",
-    "vi": "Hán Việt: Hàng ban\nChuyến bay; lịch chuyến bay"
-  },
-  {
-    "hz": "起飞",
-    "py": "qǐfēi",
-    "vi": "Hán Việt: Khởi phi\nCất cánh; dùng cho máy bay khởi hành"
-  },
-  {
-    "hz": "降落",
-    "py": "jiàngluò",
-    "vi": "Hán Việt: Giáng lạc\nHạ cánh; dùng cho máy bay đáp xuống"
-  },
-  {
-    "hz": "动物园",
-    "py": "dòngwùyuán",
-    "vi": "Hán Việt: động vật viên\nsở thú"
-  },
-  {
-    "hz": "动物",
-    "py": "dòngwù",
-    "vi": "Hán Việt: động vật\nđộng vật"
-  },
-  {
-    "hz": "熊猫",
-    "py": "xióngmāo",
-    "vi": "Hán Việt: hùng miêu\ngấu trúc"
-  },
-  {
-    "hz": "鸟",
-    "py": "niǎo",
-    "vi": "Hán Việt: điểu\nchim"
-  },
-  {
-    "hz": "马",
-    "py": "mǎ",
-    "vi": "Hán Việt: mã\nngựa"
-  },
-  {
-    "hz": "出现",
-    "py": "chūxiàn",
-    "vi": "Hán Việt: xuất hiện\nxuất hiện; phát sinh; xảy ra"
-  },
-  {
-    "hz": "聪明",
-    "py": "cōngming",
-    "vi": "Hán Việt: thông minh\nthông minh"
-  },
-  {
-    "hz": "害怕",
-    "py": "hàipà",
-    "vi": "Hán Việt: hại phạ\nsợ; lo sợ"
-  },
-  {
-    "hz": "地图",
-    "py": "dìtú",
-    "vi": "Hán Việt: địa đồ\nbản đồ"
-  },
-  {
-    "hz": "国家",
-    "py": "guójiā",
-    "vi": "Hán Việt: quốc gia\nđất nước; quốc gia"
-  },
-  {
-    "hz": "声音",
-    "py": "shēngyīn",
-    "vi": "Hán Việt: thanh âm\nâm thanh; giọng nói"
-  },
-  {
-    "hz": "段",
-    "py": "duàn",
-    "vi": "Hán Việt: đoạn\nđoạn; khoảng thời gian; quãng đường"
-  },
-  {
-    "hz": "除了……以外",
-    "py": "chúle……yǐwài",
-    "vi": "Hán Việt: trừ liễu……dĩ ngoại\nngoài……ra; bên cạnh……"
-  },
-  {
-    "hz": "不但……而且",
-    "py": "búdàn……érqiě",
-    "vi": "Hán Việt: bất đãn……nhi thả\nkhông những……mà còn……"
-  },
-  {
-    "hz": "终于",
-    "py": "zhōngyú",
-    "vi": "Hán Việt: chung vu\ncuối cùng; rốt cuộc"
-  },
-  {
-    "hz": "根据",
-    "py": "gēnjù",
-    "vi": "Hán Việt: căn cứ\ncăn cứ theo; dựa vào; căn cứ"
-  },
-  {
-    "hz": "万",
-    "py": "wàn",
-    "vi": "Hán Việt: Vạn\nMười nghìn; thường dùng để biểu đạt số lớn"
-  },
-  {
-    "hz": "词语",
-    "py": "cíyǔ",
-    "vi": "Hán Việt: Từ ngữ\nTừ; thuật ngữ; mục từ vựng"
-  },
-  {
-    "hz": "句子",
-    "py": "jùzi",
-    "vi": "Hán Việt: Cú tử\nCâu"
-  },
-  {
-    "hz": "相信",
-    "py": "xiāngxìn",
-    "vi": "Hán Việt: Tương tín\nTin; tin tưởng"
-  },
-  {
-    "hz": "新闻",
-    "py": "xīnwén",
-    "vi": "Hán Việt: Tân văn\nTin tức"
-  },
-  {
-    "hz": "习惯",
-    "py": "xíguàn",
-    "vi": "Hán Việt: Tập quán\nThói quen"
-  },
-  {
-    "hz": "主要",
-    "py": "zhǔyào",
-    "vi": "Hán Việt: Chủ yếu\nChính; chủ yếu; quan trọng nhất"
-  },
-  {
-    "hz": "要求",
-    "py": "yāoqiú",
-    "vi": "Hán Việt: Yêu cầu\nYêu cầu; điều kiện cần đáp ứng"
-  },
-  {
-    "hz": "简单",
-    "py": "jiǎndān",
-    "vi": "Hán Việt: Giản đơn\nĐơn giản; dễ"
-  },
-  {
-    "hz": "高考",
-    "py": "gāokǎo",
-    "vi": "Hán Việt: cao khảo\nKỳ thi tuyển sinh đại học toàn quốc"
-  },
-  {
-    "hz": "老",
-    "py": "lǎo",
-    "vi": "Hán Việt: lão\nGià; cũ lâu năm; quen thuộc lâu dài"
-  },
-  {
-    "hz": "开心",
-    "py": "kāixīn",
-    "vi": "Hán Việt: khai tâm\nVui vẻ; vui; hạnh phúc"
-  },
-  {
-    "hz": "了不起",
-    "py": "liǎobuqǐ",
-    "vi": "Hán Việt: liễu bất khởi\nTuyệt vời; đáng nể; xuất sắc"
-  },
-  {
-    "hz": "辛苦",
-    "py": "xīnkǔ",
-    "vi": "Hán Việt: tân khổ\nVất vả; gian khổ; đã làm việc rất vất vả"
-  },
-  {
-    "hz": "成绩",
-    "py": "chéngjì",
-    "vi": "Hán Việt: thành tích\nThành tích; kết quả học tập; kết quả thi"
-  },
-  {
-    "hz": "差",
-    "py": "chà",
-    "vi": "Hán Việt: sai\nKém; thiếu; còn thiếu"
-  },
-  {
-    "hz": "表示",
-    "py": "biǎoshì",
-    "vi": "Hán Việt: biểu thị\nBiểu đạt; thể hiện; bày tỏ"
-  },
-  {
-    "hz": "过去",
-    "py": "guòqù",
-    "vi": "Hán Việt: quá khứ\nQuá khứ; thời gian đã qua"
-  },
-  {
-    "hz": "听力",
-    "py": "tīnglì",
-    "vi": "Hán Việt: Thính lực\nKhả năng nghe; năng lực nghe hiểu"
-  },
-  {
-    "hz": "阅读",
-    "py": "yuèdú",
-    "vi": "Hán Việt: Duyệt độc\nĐọc; đọc hiểu"
-  },
-  {
-    "hz": "同意",
-    "py": "tóngyì",
-    "vi": "Hán Việt: Đồng ý\nĐồng ý; chấp thuận"
-  },
-  {
-    "hz": "留学",
-    "py": "liúxué",
-    "vi": "Hán Việt: Lưu học\nDu học"
-  },
-  {
-    "hz": "敢",
-    "py": "gǎn",
-    "vi": "Hán Việt: Cảm\nDám; có can đảm làm việc gì đó"
-  },
-  {
-    "hz": "愿意",
-    "py": "yuànyì",
-    "vi": "Hán Việt: Nguyện ý\nSẵn lòng; bằng lòng làm việc gì đó"
-  },
-  {
-    "hz": "普通话",
-    "py": "pǔtōnghuà",
-    "vi": "Hán Việt: Phổ thông thoại\nTiếng Quan thoại chuẩn; tiếng Phổ thông"
-  },
-  {
-    "hz": "祝",
-    "py": "zhù",
-    "vi": "Hán Việt: Chúc\nChúc; bày tỏ lời chúc tốt đẹp"
-  },
-  {
-    "hz": "选择",
-    "py": "xuǎnzé",
-    "vi": "Hán Việt: Tuyển trạch\nLựa chọn; chọn"
-  },
-  {
-    "hz": "作用",
-    "py": "zuòyòng",
-    "vi": "Hán Việt: Tác dụng\nTác dụng; chức năng; vai trò; ảnh hưởng"
-  }
-]
+{
+  "deck": "HSK3 · 生词",
+  "updatedAt": "2026-09-19T01:27:20.472Z",
+  "words": [
+    {
+      "hz": "季节",
+      "py": "jìjié",
+      "vi": "Mùa; một phần của năm"
+    },
+    {
+      "hz": "春天",
+      "py": "chūntiān",
+      "vi": "Mùa xuân"
+    },
+    {
+      "hz": "夏天",
+      "py": "xiàtiān",
+      "vi": "Mùa hè"
+    },
+    {
+      "hz": "秋天",
+      "py": "qiūtiān",
+      "vi": "Mùa thu"
+    },
+    {
+      "hz": "冬天",
+      "py": "dōngtiān",
+      "vi": "Mùa đông"
+    },
+    {
+      "hz": "太阳",
+      "py": "tàiyáng",
+      "vi": "Mặt trời"
+    },
+    {
+      "hz": "刮风",
+      "py": "guā fēng",
+      "vi": "Có gió; gió thổi"
+    },
+    {
+      "hz": "月亮",
+      "py": "yuèliang",
+      "vi": "Mặt trăng"
+    },
+    {
+      "hz": "雨伞",
+      "py": "yǔsǎn",
+      "vi": "Ô; dù"
+    },
+    {
+      "hz": "机会",
+      "py": "jīhuì",
+      "vi": "Cơ hội; dịp thuận lợi"
+    },
+    {
+      "hz": "舒服",
+      "py": "shūfu",
+      "vi": "Thoải mái; cảm thấy khỏe"
+    },
+    {
+      "hz": "感冒",
+      "py": "gǎnmào",
+      "vi": "Bị cảm lạnh"
+    },
+    {
+      "hz": "发烧",
+      "py": "fāshāo",
+      "vi": "Bị sốt"
+    },
+    {
+      "hz": "检查",
+      "py": "jiǎnchá",
+      "vi": "Kiểm tra; khám, đặc biệt trong ngữ cảnh y tế"
+    },
+    {
+      "hz": "健康",
+      "py": "jiànkāng",
+      "vi": "Khỏe mạnh; sức khỏe"
+    },
+    {
+      "hz": "担心",
+      "py": "dānxīn",
+      "vi": "Lo lắng"
+    },
+    {
+      "hz": "最近",
+      "py": "zuìjìn",
+      "vi": "Gần đây; dạo này"
+    },
+    {
+      "hz": "疼",
+      "py": "téng",
+      "vi": "Đau; nhức"
+    },
+    {
+      "hz": "头",
+      "py": "tóu",
+      "vi": "Đầu"
+    },
+    {
+      "hz": "久",
+      "py": "jiǔ",
+      "vi": "Lâu, chỉ khoảng thời gian dài"
+    },
+    {
+      "hz": "片",
+      "py": "piàn",
+      "vi": "Lượng từ cho viên thuốc, lát hoặc vật mỏng, phẳng"
+    },
+    {
+      "hz": "种",
+      "py": "zhǒng",
+      "vi": "Loại; kiểu; chủng loại"
+    },
+    {
+      "hz": "带",
+      "py": "dài",
+      "vi": "mang; đem theo"
+    },
+    {
+      "hz": "搬",
+      "py": "bān",
+      "vi": "chuyển; di chuyển"
+    },
+    {
+      "hz": "脸",
+      "py": "liǎn",
+      "vi": "mặt"
+    },
+    {
+      "hz": "安静",
+      "py": "ānjìng",
+      "vi": "yên tĩnh; thanh bình"
+    },
+    {
+      "hz": "阿姨",
+      "py": "āyí",
+      "vi": "dì; cách xưng hô lịch sự với phụ nữ trung niên"
+    },
+    {
+      "hz": "帮忙",
+      "py": "bāngmáng",
+      "vi": "giúp đỡ"
+    },
+    {
+      "hz": "需要",
+      "py": "xūyào",
+      "vi": "cần"
+    },
+    {
+      "hz": "热情",
+      "py": "rèqíng",
+      "vi": "nhiệt tình; niềm nở"
+    },
+    {
+      "hz": "以后",
+      "py": "yǐhòu",
+      "vi": "sau này; sau khi"
+    },
+    {
+      "hz": "行李箱",
+      "py": "xínglǐxiāng",
+      "vi": "vali"
+    },
+    {
+      "hz": "其他",
+      "py": "qítā",
+      "vi": "khác; những người/vật khác"
+    },
+    {
+      "hz": "见面",
+      "py": "jiànmiàn",
+      "vi": "gặp mặt"
+    },
+    {
+      "hz": "结婚",
+      "py": "jiéhūn",
+      "vi": "kết hôn"
+    },
+    {
+      "hz": "洗澡",
+      "py": "xǐzǎo",
+      "vi": "tắm"
+    },
+    {
+      "hz": "借",
+      "py": "jiè",
+      "vi": "mượn; cho mượn"
+    },
+    {
+      "hz": "世界",
+      "py": "shìjiè",
+      "vi": "thế giới"
+    },
+    {
+      "hz": "历史",
+      "py": "lìshǐ",
+      "vi": "lịch sử"
+    },
+    {
+      "hz": "数学",
+      "py": "shùxué",
+      "vi": "toán học"
+    },
+    {
+      "hz": "体育",
+      "py": "tǐyù",
+      "vi": "thể dục; thể thao"
+    },
+    {
+      "hz": "文化",
+      "py": "wénhuà",
+      "vi": "văn hóa"
+    },
+    {
+      "hz": "发现",
+      "py": "fāxiàn",
+      "vi": "phát hiện; nhận ra"
+    },
+    {
+      "hz": "认真",
+      "py": "rènzhēn",
+      "vi": "nghiêm túc; chăm chỉ; cần cù"
+    },
+    {
+      "hz": "完成",
+      "py": "wánchéng",
+      "vi": "hoàn thành; kết thúc"
+    },
+    {
+      "hz": "作业",
+      "py": "zuòyè",
+      "vi": "bài tập về nhà"
+    },
+    {
+      "hz": "了解",
+      "py": "liǎojiě",
+      "vi": "hiểu; tìm hiểu về"
+    },
+    {
+      "hz": "辆",
+      "py": "liàng",
+      "vi": "lượng từ dùng cho phương tiện"
+    },
+    {
+      "hz": "楼",
+      "py": "lóu",
+      "vi": "tòa nhà; tầng của một tòa nhà"
+    },
+    {
+      "hz": "发",
+      "py": "fā",
+      "vi": "gửi; phát; chuyển"
+    },
+    {
+      "hz": "会议",
+      "py": "huìyì",
+      "vi": "cuộc họp; hội nghị"
+    },
+    {
+      "hz": "周末",
+      "py": "zhōumò",
+      "vi": "cuối tuần"
+    },
+    {
+      "hz": "花园",
+      "py": "huāyuán",
+      "vi": "vườn"
+    },
+    {
+      "hz": "超市",
+      "py": "chāoshì",
+      "vi": "siêu thị"
+    },
+    {
+      "hz": "同事",
+      "py": "tóngshì",
+      "vi": "đồng nghiệp"
+    },
+    {
+      "hz": "经理",
+      "py": "jīnglǐ",
+      "vi": "quản lý; giám đốc"
+    },
+    {
+      "hz": "电梯",
+      "py": "diàntī",
+      "vi": "thang máy"
+    },
+    {
+      "hz": "办公室",
+      "py": "bàngōngshì",
+      "vi": "văn phòng"
+    },
+    {
+      "hz": "电子邮箱",
+      "py": "diànzǐ yóuxiāng",
+      "vi": "email; hộp thư điện tử"
+    },
+    {
+      "hz": "胖",
+      "py": "pàng",
+      "vi": "Béo, thừa cân"
+    },
+    {
+      "hz": "瘦",
+      "py": "shòu",
+      "vi": "Gầy; trái nghĩa với 胖"
+    },
+    {
+      "hz": "米",
+      "py": "mǐ",
+      "vi": "Mét; dùng để biểu thị độ dài"
+    },
+    {
+      "hz": "个子",
+      "py": "gèzi",
+      "vi": "Chiều cao, vóc dáng"
+    },
+    {
+      "hz": "矮",
+      "py": "ǎi",
+      "vi": "Thấp, lùn về chiều cao"
+    },
+    {
+      "hz": "鼻子",
+      "py": "bízi",
+      "vi": "Mũi"
+    },
+    {
+      "hz": "耳朵",
+      "py": "ěrduo",
+      "vi": "Tai"
+    },
+    {
+      "hz": "腿",
+      "py": "tuǐ",
+      "vi": "Chân"
+    },
+    {
+      "hz": "脚",
+      "py": "jiǎo",
+      "vi": "Bàn chân"
+    },
+    {
+      "hz": "头发",
+      "py": "tóufa",
+      "vi": "Tóc"
+    },
+    {
+      "hz": "嘴",
+      "py": "zuǐ",
+      "vi": "Miệng"
+    },
+    {
+      "hz": "甜",
+      "py": "tián",
+      "vi": "Ngọt"
+    },
+    {
+      "hz": "爬山",
+      "py": "páshān",
+      "vi": "Leo núi, đi bộ đường núi"
+    },
+    {
+      "hz": "怎么办",
+      "py": "zěnme bàn",
+      "vi": "Phải làm sao, nên xử lý thế nào"
+    },
+    {
+      "hz": "站",
+      "py": "zhàn",
+      "vi": "Đứng; trạm, bến"
+    },
+    {
+      "hz": "音乐",
+      "py": "yīnyuè",
+      "vi": "Âm nhạc"
+    },
+    {
+      "hz": "参加",
+      "py": "cānjiā",
+      "vi": "Tham gia; tham dự"
+    },
+    {
+      "hz": "比赛",
+      "py": "bǐsài",
+      "vi": "Cuộc thi, trận đấu; thi đấu"
+    },
+    {
+      "hz": "讲",
+      "py": "jiǎng",
+      "vi": "Nói; giải thích; giảng"
+    },
+    {
+      "hz": "骑",
+      "py": "qí",
+      "vi": "Cưỡi; đi bằng phương tiện như xe đạp, xe máy"
+    },
+    {
+      "hz": "聊天",
+      "py": "liáotiān",
+      "vi": "Tán gẫu; trò chuyện"
+    },
+    {
+      "hz": "上网",
+      "py": "shàngwǎng",
+      "vi": "Lên mạng; sử dụng Internet"
+    },
+    {
+      "hz": "说话",
+      "py": "shuōhuà",
+      "vi": "Nói; nói chuyện"
+    },
+    {
+      "hz": "抱",
+      "py": "bào",
+      "vi": "Ôm; bế, giữ trong vòng tay"
+    },
+    {
+      "hz": "画",
+      "py": "huà",
+      "vi": "Vẽ; tranh, bức vẽ"
+    },
+    {
+      "hz": "结束",
+      "py": "jiéshù",
+      "vi": "Kết thúc; hoàn thành"
+    },
+    {
+      "hz": "蓝",
+      "py": "lán",
+      "vi": "Màu xanh lam"
+    },
+    {
+      "hz": "告诉",
+      "py": "gàosu",
+      "vi": "Nói cho; báo cho ai biết"
+    },
+    {
+      "hz": "聊天儿",
+      "py": "liáotiānr",
+      "vi": "Tán gẫu; trò chuyện"
+    },
+    {
+      "hz": "放",
+      "py": "fàng",
+      "vi": "đặt; để"
+    },
+    {
+      "hz": "条",
+      "py": "tiáo",
+      "vi": "dùng cho vật dài, mảnh, mềm hoặc linh hoạt như váy, đường, cá"
+    },
+    {
+      "hz": "花",
+      "py": "huā",
+      "vi": "tiêu; dành (tiền hoặc thời gian)"
+    },
+    {
+      "hz": "角",
+      "py": "jiǎo",
+      "vi": "một đơn vị tiền tệ, bằng 1/10 yuan"
+    },
+    {
+      "hz": "鞋",
+      "py": "xié",
+      "vi": "giày"
+    },
+    {
+      "hz": "双",
+      "py": "shuāng",
+      "vi": "đôi; cặp"
+    },
+    {
+      "hz": "张",
+      "py": "zhāng",
+      "vi": "dùng cho vật phẳng như giấy, bàn, ảnh"
+    },
+    {
+      "hz": "把",
+      "py": "bǎ",
+      "vi": "dùng cho đồ vật có tay cầm"
+    },
+    {
+      "hz": "裙子",
+      "py": "qúnzi",
+      "vi": "váy"
+    },
+    {
+      "hz": "裤子",
+      "py": "kùzi",
+      "vi": "quần"
+    },
+    {
+      "hz": "衬衫",
+      "py": "chènshān",
+      "vi": "áo sơ mi"
+    },
+    {
+      "hz": "冰箱",
+      "py": "bīngxiāng",
+      "vi": "tủ lạnh"
+    },
+    {
+      "hz": "蛋糕",
+      "py": "dàngāo",
+      "vi": "bánh ngọt; bánh kem"
+    },
+    {
+      "hz": "果汁",
+      "py": "guǒzhī",
+      "vi": "nước ép trái cây"
+    },
+    {
+      "hz": "客人",
+      "py": "kèrén",
+      "vi": "khách; khách hàng"
+    },
+    {
+      "hz": "笔记本",
+      "py": "bǐjìběn",
+      "vi": "vở ghi chép; sổ ghi chép"
+    },
+    {
+      "hz": "笔记本电脑",
+      "py": "bǐjìběn diànnǎo",
+      "vi": "máy tính xách tay"
+    },
+    {
+      "hz": "办法",
+      "py": "bànfǎ",
+      "vi": "cách; phương pháp; giải pháp"
+    },
+    {
+      "hz": "重要",
+      "py": "zhòngyào",
+      "vi": "quan trọng"
+    },
+    {
+      "hz": "照相机",
+      "py": "zhàoxiàngjī",
+      "vi": "máy ảnh"
+    },
+    {
+      "hz": "着急",
+      "py": "zháojí",
+      "vi": "lo lắng; sốt ruột; vội"
+    },
+    {
+      "hz": "自己",
+      "py": "zìjǐ",
+      "vi": "bản thân; tự mình"
+    },
+    {
+      "hz": "打算",
+      "py": "dǎsuàn",
+      "vi": "dự định; kế hoạch; dự định làm gì"
+    },
+    {
+      "hz": "换",
+      "py": "huàn",
+      "vi": "thay đổi; đổi; thay thế"
+    },
+    {
+      "hz": "努力",
+      "py": "nǔlì",
+      "vi": "努力 (động từ): nỗ lực, học chăm; 努力 (tính từ): chăm chỉ"
+    },
+    {
+      "hz": "司机",
+      "py": "sījī",
+      "vi": "tài xế; người lái xe"
+    },
+    {
+      "hz": "记得",
+      "py": "jìde",
+      "vi": "Nhớ; vẫn còn nhớ một điều trong trí nhớ"
+    },
+    {
+      "hz": "灯",
+      "py": "dēng",
+      "vi": "Đèn; ánh sáng"
+    },
+    {
+      "hz": "空调",
+      "py": "kōngtiáo",
+      "vi": "Điều hòa; máy điều hòa"
+    },
+    {
+      "hz": "关",
+      "py": "guān",
+      "vi": "Đóng; tắt"
+    },
+    {
+      "hz": "忘记",
+      "py": "wàngjì",
+      "vi": "Quên"
+    },
+    {
+      "hz": "离开",
+      "py": "líkāi",
+      "vi": "Rời khỏi; rời đi"
+    },
+    {
+      "hz": "关心",
+      "py": "guānxīn",
+      "vi": "Quan tâm; lo lắng cho"
+    },
+    {
+      "hz": "低",
+      "py": "dī",
+      "vi": "Thấp"
+    },
+    {
+      "hz": "节目",
+      "py": "jiémù",
+      "vi": "Chương trình; tiết mục; buổi biểu diễn"
+    },
+    {
+      "hz": "礼物",
+      "py": "lǐwù",
+      "vi": "Quà; món quà"
+    },
+    {
+      "hz": "旧",
+      "py": "jiù",
+      "vi": "Cũ; đã qua sử dụng"
+    },
+    {
+      "hz": "决定",
+      "py": "juédìng",
+      "vi": "Quyết định; sự quyết định"
+    },
+    {
+      "hz": "解决",
+      "py": "jiějué",
+      "vi": "Giải quyết"
+    },
+    {
+      "hz": "还",
+      "py": "huán / hái",
+      "vi": "huán: trả lại; hái: vẫn, cũng, thêm nữa"
+    },
+    {
+      "hz": "词典",
+      "py": "cídiǎn",
+      "vi": "từ điển"
+    },
+    {
+      "hz": "铅笔",
+      "py": "qiānbǐ",
+      "vi": "bút chì"
+    },
+    {
+      "hz": "黑板",
+      "py": "hēibǎn",
+      "vi": "bảng đen"
+    },
+    {
+      "hz": "打扫",
+      "py": "dǎsǎo",
+      "vi": "quét dọn, làm vệ sinh"
+    },
+    {
+      "hz": "变",
+      "py": "biàn",
+      "vi": "thay đổi, trở nên"
+    },
+    {
+      "hz": "难",
+      "py": "nán",
+      "vi": "khó"
+    },
+    {
+      "hz": "游戏",
+      "py": "yóuxì",
+      "vi": "trò chơi"
+    },
+    {
+      "hz": "复习",
+      "py": "fùxí",
+      "vi": "ôn tập"
+    },
+    {
+      "hz": "校长",
+      "py": "xiàozhǎng",
+      "vi": "hiệu trưởng"
+    },
+    {
+      "hz": "分",
+      "py": "fēn",
+      "vi": "điểm; phút; chia, phân phát"
+    },
+    {
+      "hz": "年级",
+      "py": "niánjí",
+      "vi": "khối, lớp theo cấp học"
+    },
+    {
+      "hz": "接",
+      "py": "jiē",
+      "vi": "Hán Việt: tiếp. đón; nhận"
+    },
+    {
+      "hz": "必须",
+      "py": "bìxū",
+      "vi": "Hán Việt: tất tu. phải; nhất định phải"
+    },
+    {
+      "hz": "附近",
+      "py": "fùjìn",
+      "vi": "Hán Việt: phụ cận. gần; ở khu vực xung quanh"
+    },
+    {
+      "hz": "银行",
+      "py": "yínháng",
+      "vi": "Hán Việt: ngân hàng. ngân hàng"
+    },
+    {
+      "hz": "信用卡",
+      "py": "xìnyòngkǎ",
+      "vi": "Hán Việt: tín dụng tạp. thẻ tín dụng"
+    },
+    {
+      "hz": "叔叔",
+      "py": "shūshu",
+      "vi": "Hán Việt: thúc thúc. chú; cách gọi kính trọng một người đàn ông lớn tuổi"
+    },
+    {
+      "hz": "地铁",
+      "py": "dìtiě",
+      "vi": "Hán Việt: địa thiết. tàu điện ngầm; metro"
+    },
+    {
+      "hz": "帽子",
+      "py": "màozi",
+      "vi": "Hán Việt: mạo tử. mũ; nón"
+    },
+    {
+      "hz": "绿",
+      "py": "lǜ",
+      "vi": "Hán Việt: lục. xanh lá cây; màu xanh lá cây"
+    },
+    {
+      "hz": "奇怪",
+      "py": "qíguài",
+      "vi": "Hán Việt: kỳ quái. kỳ lạ; khác thường"
+    },
+    {
+      "hz": "层",
+      "py": "céng",
+      "vi": "Hán Việt: tầng. tầng của một tòa nhà"
+    },
+    {
+      "hz": "城市",
+      "py": "chéngshì",
+      "vi": "Hán Việt: thành thị. thành phố"
+    },
+    {
+      "hz": "方便",
+      "py": "fāngbiàn",
+      "vi": "Hán Việt: phương tiện. thuận tiện; tiện lợi"
+    },
+    {
+      "hz": "葡萄",
+      "py": "pútao",
+      "vi": "Hán Việt: bồ đào\nnho"
+    },
+    {
+      "hz": "葡萄汁",
+      "py": "pútao zhī",
+      "vi": "Hán Việt: bồ đào trấp\nnước ép nho"
+    },
+    {
+      "hz": "香蕉",
+      "py": "xiāngjiāo",
+      "vi": "Hán Việt: hương tiêu\nchuối"
+    },
+    {
+      "hz": "最后",
+      "py": "zuìhòu",
+      "vi": "Hán Việt: tối hậu\ncuối cùng; cuối"
+    },
+    {
+      "hz": "洗衣机",
+      "py": "xǐyījī",
+      "vi": "Hán Việt: tẩy y cơ\nmáy giặt"
+    },
+    {
+      "hz": "新鲜",
+      "py": "xīnxiān",
+      "vi": "Hán Việt: tân tiên\ntươi mới"
+    },
+    {
+      "hz": "草",
+      "py": "cǎo",
+      "vi": "Hán Việt: thảo\ncỏ"
+    },
+    {
+      "hz": "环境",
+      "py": "huánjìng",
+      "vi": "Hán Việt: hoàn cảnh\nmôi trường; hoàn cảnh xung quanh"
+    },
+    {
+      "hz": "厨房",
+      "py": "chúfáng",
+      "vi": "Hán Việt: trù phòng\nnhà bếp"
+    },
+    {
+      "hz": "饮料",
+      "py": "yǐnliào",
+      "vi": "Hán Việt: ẩm liệu\nđồ uống"
+    },
+    {
+      "hz": "啤酒",
+      "py": "píjiǔ",
+      "vi": "Hán Việt: bia tửu\nbia"
+    },
+    {
+      "hz": "清楚",
+      "py": "qīngchu",
+      "vi": "Hán Việt: thanh sở\nrõ ràng; rõ; hiểu rõ"
+    },
+    {
+      "hz": "船",
+      "py": "chuán",
+      "vi": "Hán Việt: thuyền\nthuyền; tàu"
+    },
+    {
+      "hz": "刷牙",
+      "py": "shuā yá",
+      "vi": "Hán Việt: soát nha\nđánh răng"
+    },
+    {
+      "hz": "牙刷",
+      "py": "yáshuā",
+      "vi": "Hán Việt: nha soát\nbàn chải đánh răng"
+    },
+    {
+      "hz": "节日",
+      "py": "jiérì",
+      "vi": "Hán Việt:  tiết nhật \n ngày lễ, lễ hội"
+    },
+    {
+      "hz": "饭馆",
+      "py": "fànguǎn",
+      "vi": "Hán Việt:  phạn quán \n nhà hàng, quán ăn nhỏ"
+    },
+    {
+      "hz": "菜单",
+      "py": "càidān",
+      "vi": "Hán Việt:  thái đơn \n thực đơn, menu"
+    },
+    {
+      "hz": "筷子",
+      "py": "kuàizi",
+      "vi": "Hán Việt:  khoái tử \n đũa"
+    },
+    {
+      "hz": "盘子",
+      "py": "pánzi",
+      "vi": "Hán Việt:  bàn tử \n đĩa, cái đĩa"
+    },
+    {
+      "hz": "碗",
+      "py": "wǎn",
+      "vi": "Hán Việt:  oản \n bát; bát/phần đồ ăn đựng trong bát"
+    },
+    {
+      "hz": "渴",
+      "py": "kě",
+      "vi": "Hán Việt:  khát \n khát"
+    },
+    {
+      "hz": "饱",
+      "py": "bǎo",
+      "vi": "Hán Việt:  bão \n no"
+    },
+    {
+      "hz": "口",
+      "py": "kǒu",
+      "vi": "Hán Việt:  khẩu \n miệng; ngụm, miếng"
+    },
+    {
+      "hz": "点",
+      "py": "diǎn",
+      "vi": "Hán Việt:  điểm \n gọi món, gọi đồ ăn/thức uống"
+    },
+    {
+      "hz": "突然",
+      "py": "tūrán",
+      "vi": "Hán Việt:  đột nhiên \n đột ngột; đột nhiên"
+    },
+    {
+      "hz": "明白",
+      "py": "míngbai",
+      "vi": "Hán Việt:  minh bạch \n rõ ràng; hiểu"
+    },
+    {
+      "hz": "哭",
+      "py": "kū",
+      "vi": "Hán Việt: khốc\nKhóc; rơi nước mắt"
+    },
+    {
+      "hz": "用",
+      "py": "yòng",
+      "vi": "Hán Việt: dụng\nDùng; sử dụng"
+    },
+    {
+      "hz": "迟到",
+      "py": "chídào",
+      "vi": "Hán Việt: trì đáo\nĐến muộn; bị trễ"
+    },
+    {
+      "hz": "放心",
+      "py": "fàngxīn",
+      "vi": "Hán Việt: phóng tâm\nYên tâm; không lo lắng"
+    },
+    {
+      "hz": "满意",
+      "py": "mǎnyì",
+      "vi": "Hán Việt: mãn ý\nHài lòng; vừa ý"
+    },
+    {
+      "hz": "影响",
+      "py": "yǐngxiǎng",
+      "vi": "Hán Việt: ảnh hưởng\nẢnh hưởng; tác động"
+    },
+    {
+      "hz": "邻居",
+      "py": "línjū",
+      "vi": "Hán Việt: lân cư\nHàng xóm"
+    },
+    {
+      "hz": "坏",
+      "py": "huài",
+      "vi": "Hán Việt: hoại\nXấu; hỏng"
+    },
+    {
+      "hz": "短",
+      "py": "duǎn",
+      "vi": "Hán Việt: đoản\nNgắn"
+    },
+    {
+      "hz": "难过",
+      "py": "nánguò",
+      "vi": "Hán Việt: nan quá\nBuồn; đau lòng; khó chịu"
+    },
+    {
+      "hz": "注意",
+      "py": "zhùyì",
+      "vi": "Hán Việt: chú ý\nChú ý; để ý"
+    },
+    {
+      "hz": "WeChat (微信)",
+      "py": "Wēixìn",
+      "vi": "Hán Việt: Vi tín\nWeChat; ứng dụng mạng xã hội phổ biến dùng để nhắn tin và giao tiếp"
+    },
+    {
+      "hz": "遇到",
+      "py": "yùdào",
+      "vi": "Hán Việt: Ngộ đáo\nGặp; gặp phải; tình cờ gặp, thường không có chủ ý"
+    },
+    {
+      "hz": "照顾",
+      "py": "zhàogù",
+      "vi": "Hán Việt: Chiếu cố\nChăm sóc; trông nom"
+    },
+    {
+      "hz": "容易",
+      "py": "róngyì",
+      "vi": "Hán Việt: Dung dị\nDễ; có khả năng dễ xảy ra"
+    },
+    {
+      "hz": "北方",
+      "py": "běifāng",
+      "vi": "Hán Việt: Bắc phương\nPhía Bắc; miền Bắc"
+    },
+    {
+      "hz": "以前",
+      "py": "yǐqián",
+      "vi": "Hán Việt: Dĩ tiền\nTrước đây; trước kia; trong quá khứ"
+    },
+    {
+      "hz": "后来",
+      "py": "hòulái",
+      "vi": "Hán Việt: Hậu lai\nSau đó; về sau, chỉ các sự việc đã xảy ra trong quá khứ"
+    },
+    {
+      "hz": "宾馆",
+      "py": "bīnguǎn",
+      "vi": "Hán Việt: Tân quán\nNhà khách; hostel; thường dùng cho khách chính thức hoặc khách của cơ quan/trường học"
+    },
+    {
+      "hz": "航班",
+      "py": "hángbān",
+      "vi": "Hán Việt: Hàng ban\nChuyến bay; lịch chuyến bay"
+    },
+    {
+      "hz": "起飞",
+      "py": "qǐfēi",
+      "vi": "Hán Việt: Khởi phi\nCất cánh; dùng cho máy bay khởi hành"
+    },
+    {
+      "hz": "降落",
+      "py": "jiàngluò",
+      "vi": "Hán Việt: Giáng lạc\nHạ cánh; dùng cho máy bay đáp xuống"
+    },
+    {
+      "hz": "动物园",
+      "py": "dòngwùyuán",
+      "vi": "Hán Việt: động vật viên\nsở thú"
+    },
+    {
+      "hz": "动物",
+      "py": "dòngwù",
+      "vi": "Hán Việt: động vật\nđộng vật"
+    },
+    {
+      "hz": "熊猫",
+      "py": "xióngmāo",
+      "vi": "Hán Việt: hùng miêu\ngấu trúc"
+    },
+    {
+      "hz": "鸟",
+      "py": "niǎo",
+      "vi": "Hán Việt: điểu\nchim"
+    },
+    {
+      "hz": "马",
+      "py": "mǎ",
+      "vi": "Hán Việt: mã\nngựa"
+    },
+    {
+      "hz": "出现",
+      "py": "chūxiàn",
+      "vi": "Hán Việt: xuất hiện\nxuất hiện; phát sinh; xảy ra"
+    },
+    {
+      "hz": "聪明",
+      "py": "cōngming",
+      "vi": "Hán Việt: thông minh\nthông minh"
+    },
+    {
+      "hz": "害怕",
+      "py": "hàipà",
+      "vi": "Hán Việt: hại phạ\nsợ; lo sợ"
+    },
+    {
+      "hz": "地图",
+      "py": "dìtú",
+      "vi": "Hán Việt: địa đồ\nbản đồ"
+    },
+    {
+      "hz": "国家",
+      "py": "guójiā",
+      "vi": "Hán Việt: quốc gia\nđất nước; quốc gia"
+    },
+    {
+      "hz": "声音",
+      "py": "shēngyīn",
+      "vi": "Hán Việt: thanh âm\nâm thanh; giọng nói"
+    },
+    {
+      "hz": "段",
+      "py": "duàn",
+      "vi": "Hán Việt: đoạn\nđoạn; khoảng thời gian; quãng đường"
+    },
+    {
+      "hz": "除了……以外",
+      "py": "chúle……yǐwài",
+      "vi": "Hán Việt: trừ liễu……dĩ ngoại\nngoài……ra; bên cạnh……"
+    },
+    {
+      "hz": "不但……而且",
+      "py": "búdàn……érqiě",
+      "vi": "Hán Việt: bất đãn……nhi thả\nkhông những……mà còn……"
+    },
+    {
+      "hz": "终于",
+      "py": "zhōngyú",
+      "vi": "Hán Việt: chung vu\ncuối cùng; rốt cuộc"
+    },
+    {
+      "hz": "根据",
+      "py": "gēnjù",
+      "vi": "Hán Việt: căn cứ\ncăn cứ theo; dựa vào; căn cứ"
+    },
+    {
+      "hz": "万",
+      "py": "wàn",
+      "vi": "Hán Việt: Vạn\nMười nghìn; thường dùng để biểu đạt số lớn"
+    },
+    {
+      "hz": "词语",
+      "py": "cíyǔ",
+      "vi": "Hán Việt: Từ ngữ\nTừ; thuật ngữ; mục từ vựng"
+    },
+    {
+      "hz": "句子",
+      "py": "jùzi",
+      "vi": "Hán Việt: Cú tử\nCâu"
+    },
+    {
+      "hz": "相信",
+      "py": "xiāngxìn",
+      "vi": "Hán Việt: Tương tín\nTin; tin tưởng"
+    },
+    {
+      "hz": "新闻",
+      "py": "xīnwén",
+      "vi": "Hán Việt: Tân văn\nTin tức"
+    },
+    {
+      "hz": "习惯",
+      "py": "xíguàn",
+      "vi": "Hán Việt: Tập quán\nThói quen"
+    },
+    {
+      "hz": "主要",
+      "py": "zhǔyào",
+      "vi": "Hán Việt: Chủ yếu\nChính; chủ yếu; quan trọng nhất"
+    },
+    {
+      "hz": "要求",
+      "py": "yāoqiú",
+      "vi": "Hán Việt: Yêu cầu\nYêu cầu; điều kiện cần đáp ứng"
+    },
+    {
+      "hz": "简单",
+      "py": "jiǎndān",
+      "vi": "Hán Việt: Giản đơn\nĐơn giản; dễ"
+    },
+    {
+      "hz": "高考",
+      "py": "gāokǎo",
+      "vi": "Hán Việt: cao khảo\nKỳ thi tuyển sinh đại học toàn quốc"
+    },
+    {
+      "hz": "老",
+      "py": "lǎo",
+      "vi": "Hán Việt: lão\nGià; cũ lâu năm; quen thuộc lâu dài"
+    },
+    {
+      "hz": "开心",
+      "py": "kāixīn",
+      "vi": "Hán Việt: khai tâm\nVui vẻ; vui; hạnh phúc"
+    },
+    {
+      "hz": "了不起",
+      "py": "liǎobuqǐ",
+      "vi": "Hán Việt: liễu bất khởi\nTuyệt vời; đáng nể; xuất sắc"
+    },
+    {
+      "hz": "辛苦",
+      "py": "xīnkǔ",
+      "vi": "Hán Việt: tân khổ\nVất vả; gian khổ; đã làm việc rất vất vả"
+    },
+    {
+      "hz": "成绩",
+      "py": "chéngjì",
+      "vi": "Hán Việt: thành tích\nThành tích; kết quả học tập; kết quả thi"
+    },
+    {
+      "hz": "差",
+      "py": "chà",
+      "vi": "Hán Việt: sai\nKém; thiếu; còn thiếu"
+    },
+    {
+      "hz": "表示",
+      "py": "biǎoshì",
+      "vi": "Hán Việt: biểu thị\nBiểu đạt; thể hiện; bày tỏ"
+    },
+    {
+      "hz": "过去",
+      "py": "guòqù",
+      "vi": "Hán Việt: quá khứ\nQuá khứ; thời gian đã qua"
+    },
+    {
+      "hz": "听力",
+      "py": "tīnglì",
+      "vi": "Hán Việt: Thính lực\nKhả năng nghe; năng lực nghe hiểu"
+    },
+    {
+      "hz": "阅读",
+      "py": "yuèdú",
+      "vi": "Hán Việt: Duyệt độc\nĐọc; đọc hiểu"
+    },
+    {
+      "hz": "同意",
+      "py": "tóngyì",
+      "vi": "Hán Việt: Đồng ý\nĐồng ý; chấp thuận"
+    },
+    {
+      "hz": "留学",
+      "py": "liúxué",
+      "vi": "Hán Việt: Lưu học\nDu học"
+    },
+    {
+      "hz": "敢",
+      "py": "gǎn",
+      "vi": "Hán Việt: Cảm\nDám; có can đảm làm việc gì đó"
+    },
+    {
+      "hz": "愿意",
+      "py": "yuànyì",
+      "vi": "Hán Việt: Nguyện ý\nSẵn lòng; bằng lòng làm việc gì đó"
+    },
+    {
+      "hz": "普通话",
+      "py": "pǔtōnghuà",
+      "vi": "Hán Việt: Phổ thông thoại\nTiếng Quan thoại chuẩn; tiếng Phổ thông"
+    },
+    {
+      "hz": "祝",
+      "py": "zhù",
+      "vi": "Hán Việt: Chúc\nChúc; bày tỏ lời chúc tốt đẹp"
+    },
+    {
+      "hz": "选择",
+      "py": "xuǎnzé",
+      "vi": "Hán Việt: Tuyển trạch\nLựa chọn; chọn"
+    },
+    {
+      "hz": "作用",
+      "py": "zuòyòng",
+      "vi": "Hán Việt: Tác dụng\nTác dụng; chức năng; vai trò; ảnh hưởng"
+    }
+  ]
+}
