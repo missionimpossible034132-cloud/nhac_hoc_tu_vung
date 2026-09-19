@@ -26,7 +26,10 @@ WORDS_FILE = os.environ.get("WORDS_FILE", "words.json")
 def load_words(path):
     with open(path, "r", encoding="utf-8") as f:
         data = json.load(f)
-    return [w for w in data if w.get("hz") and w.get("py")]
+    # Chấp nhận cả 2 dạng: mảng phẳng [ {...}, {...} ]  hoặc object bọc { "words": [ {...}, ... ] }
+    if isinstance(data, dict):
+        data = data.get("words", [])
+    return [w for w in data if isinstance(w, dict) and w.get("hz") and w.get("py")]
 
 
 def pick_words(words, n):
