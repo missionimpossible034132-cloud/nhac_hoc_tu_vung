@@ -902,23 +902,21 @@ async function toggleRecording(){
   const rec = getRecognizer();
   if(!rec){ toast('Trình duyệt này không hỗ trợ nhận diện giọng nói tiếng Trung. Hãy thử Chrome trên máy tính hoặc Android.'); return; }
 
-  try{
-    micStream = await navigator.mediaDevices.getUserMedia({audio:true});
-  }catch(e){
-    toast('Trình duyệt/hệ thống chặn quyền micro. Cần mở app qua http(s) (không phải mở trực tiếp file .html) và cho phép quyền micro khi được hỏi.');
-    return;
-  }
-  startMicBars(micStream);
-  startAudioCapture(micStream);
-
   isRecording = true;
   setMicState('listening');
   rec.onresult = e=>{
     q.picked = e.results[0][0].transcript;
   };
   rec.onerror = e=>{
-    if(e.error==='no-speech') toast('Không nghe thấy giọng nói, thử lại nhé');
-    else if(e.error!=='aborted') toast('Lỗi ghi âm: '+e.error);
+    if(e.error==='not-allowed' || e.error==='service-not-allowed'){
+      toast('Trình duyệt/hệ thống chặn quyền micro. Cần mở app qua http(s) (không phải mở trực tiếp file .html) và cho phép quyền micro khi được hỏi.');
+    } else if(e.error==='no-speech'){
+      toast('Không nghe thấy giọng nói, thử lại nhé (nói to và gần micro hơn)');
+    } else if(e.error==='network'){
+      toast('Nhận diện giọng nói cần có mạng — kiểm tra lại kết nối internet rồi thử lại');
+    } else if(e.error!=='aborted'){
+      toast('Lỗi ghi âm: '+e.error);
+    }
   };
   rec.onend = async ()=>{
     isRecording = false;
@@ -934,9 +932,23 @@ async function toggleRecording(){
     }
   };
   try{ rec.start(); }catch(e){
-    isRecording=false; stopMicBars(); releaseMicStream(); setMicState('idle');
-    toast('Không khởi động được micro');
+    isRecording=false; setMicState('idle');
+    toast('Không khởi động được micro'); return;
   }
+
+  // Mở RIÊNG một luồng micro thứ hai chỉ để vẽ mức âm thanh + ghi lại đoạn phát lại — không dùng
+  // để nhận diện. Tắt hẳn echoCancellation/noiseSuppression/autoGainControl vì trên nhiều điện thoại
+  // Android, các chế độ xử lý âm này khiến hệ thống coi đây là luồng "độc quyền" và giành mất tín hiệu
+  // sạch của luồng nhận diện giọng nói ở trên — làm nhận diện không nghe thấy gì dù bạn nói rất rõ.
+  // Khởi động SAU rec.start() để nhận diện luôn được ưu tiên giành mic trước; nếu bước này lỗi thì
+  // bỏ qua, không ảnh hưởng gì đến việc nhận diện (chỉ mất phần vẽ mức âm + nghe lại).
+  try{
+    micStream = await navigator.mediaDevices.getUserMedia({
+      audio: { echoCancellation:false, noiseSuppression:false, autoGainControl:false }
+    });
+    startMicBars(micStream);
+    startAudioCapture(micStream);
+  }catch(e){ /* bỏ qua — nhận diện giọng nói vẫn chạy bình thường không cần luồng phụ này */ }
 }
 function stopRecording(){
   if(recognizer && isRecording){ try{ recognizer.stop(); }catch(e){} }
