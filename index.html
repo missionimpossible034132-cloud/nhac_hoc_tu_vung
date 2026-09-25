@@ -152,8 +152,8 @@ nav.mode-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1f
 .playback-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 12px;margin-top:6px}
 .mic-bars{display:flex;align-items:flex-end;justify-content:center;gap:4px;height:32px}
 .mic-bars i{display:block;width:5px;height:5px;border-radius:3px;background:var(--line);transition:height .05s linear}
-#recPlaybackBtn.recording{border-color:var(--seal);color:var(--seal)}
-#recPlaybackBtn.recording ~ .mic-bars i{background:var(--seal)}
+.mic-btn:disabled{opacity:.5;cursor:default;transform:none}
+.ai-status{font-size:12px;color:var(--ink-soft);min-height:16px}
 #playbackSlot{margin-top:4px}
 .speak-result{grid-column:1/-1;text-align:center;padding:6px 0;font-size:15px}
 .speak-result p{margin:4px 0}
@@ -425,7 +425,7 @@ const DATA_DEFAULT = [{"hz": "季节", "py": "jìjié", "pos": "Danh từ", "vi"
 const HANZI_ANALYSIS = {"万":{"py":"wàn","radical":"一","leaves":[{"c":"一","py":"yī","vi":"một, nét ngang"}]},"上":{"py":"shàng","radical":"一","leaves":[{"c":"⺊","py":"","vi":"bói toán (biến thể bộ bốc)"},{"c":"一","py":"yī","vi":"một, nét ngang"}]},"不":{"py":"bù","radical":"一","leaves":[{"c":"一","py":"yī","vi":"một, nét ngang"}]},"且":{"py":"qiě","radical":"一","leaves":[{"c":"月","py":"yuè","vi":"mặt trăng, tháng"},{"c":"一","py":"yī","vi":"một, nét ngang"}]},"世":{"py":"shì","radical":"一","leaves":[{"c":"廿","py":"niàn","vi":"hai mươi"}]},"业":{"py":"yè","radical":"一","leaves":[{"c":"一","py":"yī","vi":"một, nét ngang"}]},"个":{"py":"gè","radical":"丨","leaves":[{"c":"人","py":"rén","vi":"người"},{"c":"丨","py":"shù","vi":"nét sổ thẳng"}]},"主":{"py":"zhǔ","radical":"丶","leaves":[{"c":"丶","py":"diǎn","vi":"nét chấm"},{"c":"王","py":"wáng","vi":"vua"}]},"久":{"py":"jiǔ","radical":"丿","leaves":[{"c":"勹","py":"bāo","vi":"bọc, ôm lấy"}]},"么":{"py":"me","radical":"丿","leaves":[{"c":"丿","py":"piě","vi":"nét phẩy"},{"c":"厶","py":"sī","vi":"riêng tư (cổ)"}]},"乐":{"py":"lè","radical":"丿","leaves":[{"c":"丿","py":"piě","vi":"nét phẩy"},{"c":"小","py":"xiǎo","vi":"nhỏ"}]},"习":{"py":"xí","radical":"冫","leaves":[{"c":"冫","py":"bīng","vi":"băng, đá lạnh"}]},"了":{"py":"le","radical":"亅","leaves":[{"c":"乛","py":"ya","vi":"nét ngang móc"},{"c":"亅","py":"jué","vi":"nét móc câu"}]},"事":{"py":"shì","radical":"亅","leaves":[{"c":"一","py":"yī","vi":"một, nét ngang"},{"c":"口","py":"kǒu","vi":"cái miệng"},{"c":"彐","py":"jì","vi":"đầu con lợn (cổ)"},{"c":"亅","py":"jué","vi":"nét móc câu"}]},"于":{"py":"yú","radical":"二","leaves":[{"c":"二","py":"èr","vi":"hai"},{"c":"亅","py":"jué","vi":"nét móc câu"}]},"亮":{"py":"liàng","radical":"亠","leaves":[{"c":"亠","py":"tóu","vi":"nắp, đầu (bộ đầu)"},{"c":"口","py":"kǒu","vi":"cái miệng"},{"c":"冖","py":"mì","vi":"khăn trùm, nắp đậy"},{"c":"几","py":"jǐ","vi":"cái bàn nhỏ, mấy"}]},"人":{"py":"rén","radical":"人","leaves":[]},"他":{"py":"tā","radical":"亻","leaves":[{"c":"亻","py":"rén","vi":"người (bộ đứng)"},{"c":"也","py":"yě","vi":"cũng, vậy"}]},"以":{"py":"yǐ","radical":"人","leaves":[{"c":"人","py":"rén","vi":"người"}]},"会":{"py":"huì","radical":"人","leaves":[{"c":"人","py":"rén","vi":"người"},{"c":"云","py":"yún","vi":"mây"}]},"伞":{"py":"sǎn","radical":"人","leaves":[{"c":"人","py":"rén","vi":"người"}]},"但":{"py":"dàn","radical":"亻","leaves":[{"c":"亻","py":"rén","vi":"người (bộ đứng)"},{"c":"旦","py":"dàn","vi":"bình minh"}]},"低":{"py":"dī","radical":"亻","leaves":[{"c":"亻","py":"rén","vi":"người (bộ đứng)"},{"c":"氐","py":"dī","vi":"gốc rễ (cổ)"}]},"体":{"py":"tǐ","radical":"亻","leaves":[{"c":"亻","py":"rén","vi":"người (bộ đứng)"},{"c":"本","py":"běn","vi":"gốc rễ, vốn có"}]},"作":{"py":"zuò","radical":"亻","leaves":[{"c":"亻","py":"rén","vi":"người (bộ đứng)"},{"c":"乍","py":"zhà","vi":"chợt, thoạt tiên"}]},"便":{"py":"biàn","radical":"亻","leaves":[{"c":"亻","py":"rén","vi":"người (bộ đứng)"},{"c":"更","py":"gèng","vi":"càng, thay đổi"}]},"信":{"py":"xìn","radical":"亻","leaves":[{"c":"亻","py":"rén","vi":"người (bộ đứng)"},{"c":"言","py":"yán","vi":"lời nói"}]},"借":{"py":"jiè","radical":"亻","leaves":[{"c":"亻","py":"rén","vi":"người (bộ đứng)"},{"c":"昔","py":"xī","vi":"xưa kia"}]},"健":{"py":"jiàn","radical":"亻","leaves":[{"c":"亻","py":"rén","vi":"người (bộ đứng)"},{"c":"建","py":"jiàn","vi":"xây dựng"}]},"儿":{"py":"ér","radical":"儿","leaves":[{"c":"丿","py":"piě","vi":"nét phẩy"},{"c":"乚","py":"gōu","vi":"nét móc"}]},"公":{"py":"gōng","radical":"八","leaves":[{"c":"八","py":"bā","vi":"tám"},{"c":"厶","py":"sī","vi":"riêng tư (cổ)"}]},"关":{"py":"guān","radical":"丷","leaves":[{"c":"丷","py":"ha","vi":"hai nét chia (biến thể bộ bát)"},{"c":"天","py":"tiān","vi":"trời"}]},"其":{"py":"qí","radical":"八","leaves":[{"c":"甘","py":"gān","vi":"ngọt"},{"c":"一","py":"yī","vi":"một, nét ngang"},{"c":"八","py":"bā","vi":"tám"}]},"典":{"py":"diǎn","radical":"八","leaves":[{"c":"曲","py":"qū","vi":"cong, bài hát"},{"c":"八","py":"bā","vi":"tám"}]},"冒":{"py":"mào","radical":"冂","leaves":[{"c":"日","py":"rì","vi":"mặt trời, ngày"},{"c":"目","py":"mù","vi":"con mắt"}]},"冬":{"py":"dōng","radical":"⺀","leaves":[{"c":"夂","py":"zhǐ","vi":"bước chân đi xuống (cổ)"},{"c":"⺀","py":"","vi":"băng giá (biến thể bộ băng)"}]},"冰":{"py":"bīng","radical":"冫","leaves":[{"c":"冫","py":"bīng","vi":"băng, đá lạnh"},{"c":"水","py":"shuǐ","vi":"nước"}]},"决":{"py":"jué","radical":"冫","leaves":[{"c":"冫","py":"bīng","vi":"băng, đá lạnh"},{"c":"夬","py":"guài","vi":"quyết đoán (cổ)"}]},"出":{"py":"chū","radical":"凵","leaves":[{"c":"屮","py":"chè","vi":"mầm cỏ non (cổ)"},{"c":"凵","py":"qiǎn","vi":"cái hố, miệng há"}]},"分":{"py":"fēn","radical":"刀","leaves":[{"c":"八","py":"bā","vi":"tám"},{"c":"刀","py":"dāo","vi":"con dao"}]},"刮":{"py":"guā","radical":"刂","leaves":[{"c":"舌","py":"shé","vi":"cái lưỡi"},{"c":"刂","py":"dāo","vi":"dao (bộ đứng)"}]},"到":{"py":"dào","radical":"刂","leaves":[{"c":"至","py":"zhì","vi":"đến, tới"},{"c":"刂","py":"dāo","vi":"dao (bộ đứng)"}]},"刷":{"py":"shuā","radical":"刂","leaves":[{"c":"尸","py":"shī","vi":"xác chết, thây (bộ thi)"},{"c":"巾","py":"jīn","vi":"khăn vải"},{"c":"刂","py":"dāo","vi":"dao (bộ đứng)"}]},"前":{"py":"qián","radical":"刂","leaves":[{"c":"丷","py":"ha","vi":"hai nét chia (biến thể bộ bát)"},{"c":"一","py":"yī","vi":"một, nét ngang"},{"c":"刖","py":"yuè","vi":"chặt chân (hình phạt cổ)"}]},"力":{"py":"lì","radical":"力","leaves":[{"c":"丿","py":"piě","vi":"nét phẩy"}]},"办":{"py":"bàn","radical":"力","leaves":[{"c":"力","py":"lì","vi":"sức lực"},{"c":"八","py":"bā","vi":"tám"}]},"加":{"py":"jiā","radical":"力","leaves":[{"c":"力","py":"lì","vi":"sức lực"},{"c":"口","py":"kǒu","vi":"cái miệng"}]},"动":{"py":"dòng","radical":"力","leaves":[{"c":"云","py":"yún","vi":"mây"},{"c":"力","py":"lì","vi":"sức lực"}]},"努":{"py":"nǔ","radical":"力","leaves":[{"c":"奴","py":"nú","vi":"nô lệ"},{"c":"力","py":"lì","vi":"sức lực"}]},"化":{"py":"huà","radical":"匕","leaves":[{"c":"亻","py":"rén","vi":"người (bộ đứng)"},{"c":"匕","py":"bǐ","vi":"cái thìa (cổ)"}]},"北":{"py":"běi","radical":"匕","leaves":[{"c":"匕","py":"bǐ","vi":"cái thìa (cổ)"}]},"单":{"py":"dān","radical":"丷","leaves":[{"c":"丷","py":"ha","vi":"hai nét chia (biến thể bộ bát)"}]},"卡":{"py":"kǎ","radical":"卜","leaves":[{"c":"上","py":"shàng","vi":"ở trên, đi lên"},{"c":"卜","py":"bo","vi":"bói toán"}]},"历":{"py":"lì","radical":"厂","leaves":[{"c":"厂","py":"chǎng","vi":"vách núi, xưởng"},{"c":"力","py":"lì","vi":"sức lực"}]},"厨":{"py":"chú","radical":"厂","leaves":[{"c":"厂","py":"chǎng","vi":"vách núi, xưởng"},{"c":"豆","py":"dòu","vi":"hạt đậu"},{"c":"寸","py":"cùn","vi":"tấc (đơn vị đo)"}]},"去":{"py":"qù","radical":"厶","leaves":[{"c":"土","py":"tǔ","vi":"đất"},{"c":"厶","py":"sī","vi":"riêng tư (cổ)"}]},"参":{"py":"cān","radical":"厶","leaves":[{"c":"厶","py":"sī","vi":"riêng tư (cổ)"},{"c":"大","py":"dà","vi":"to lớn"},{"c":"彡","py":"shān","vi":"vệt lông, nét trang trí"}]},"双":{"py":"shuāng","radical":"又","leaves":[{"c":"又","py":"yòu","vi":"lại một lần nữa; tay phải (cổ)"}]},"发":{"py":"fā","radical":"又","leaves":[{"c":"又","py":"yòu","vi":"lại một lần nữa; tay phải (cổ)"}]},"叔":{"py":"shū","radical":"又","leaves":[{"c":"上","py":"shàng","vi":"ở trên, đi lên"},{"c":"小","py":"xiǎo","vi":"nhỏ"},{"c":"又","py":"yòu","vi":"lại một lần nữa; tay phải (cổ)"}]},"变":{"py":"biàn","radical":"又","leaves":[{"c":"亦","py":"yì","vi":"cũng"},{"c":"又","py":"yòu","vi":"lại một lần nữa; tay phải (cổ)"}]},"口":{"py":"kǒu","radical":"口","leaves":[{"c":"冂","py":"jiōng","vi":"vùng biên, khung ngoài"},{"c":"一","py":"yī","vi":"một, nét ngang"}]},"句":{"py":"jù","radical":"口","leaves":[{"c":"勹","py":"bāo","vi":"bọc, ôm lấy"},{"c":"口","py":"kǒu","vi":"cái miệng"}]},"史":{"py":"shǐ","radical":"口","leaves":[{"c":"口","py":"kǒu","vi":"cái miệng"},{"c":"乂","py":"yì","vi":"cắt cỏ, trị lý"}]},"司":{"py":"sī","radical":"口","leaves":[{"c":"口","py":"kǒu","vi":"cái miệng"}]},"同":{"py":"tóng","radical":"口","leaves":[{"c":"凡","py":"fán","vi":"phàm, tất cả, tầm thường"},{"c":"口","py":"kǒu","vi":"cái miệng"}]},"后":{"py":"hòu","radical":"口","leaves":[{"c":"口","py":"kǒu","vi":"cái miệng"}]},"听":{"py":"tīng","radical":"口","leaves":[{"c":"口","py":"kǒu","vi":"cái miệng"},{"c":"斤","py":"jīn","vi":"cân, cái rìu"}]},"告":{"py":"gào","radical":"口","leaves":[{"c":"牛","py":"niú","vi":"con trâu, bò"},{"c":"口","py":"kǒu","vi":"cái miệng"}]},"周":{"py":"zhōu","radical":"口","leaves":[{"c":"冂","py":"jiōng","vi":"vùng biên, khung ngoài"},{"c":"土","py":"tǔ","vi":"đất"},{"c":"口","py":"kǒu","vi":"cái miệng"}]},"响":{"py":"xiǎng","radical":"口","leaves":[{"c":"口","py":"kǒu","vi":"cái miệng"},{"c":"向","py":"xiàng","vi":"hướng về"}]},"哭":{"py":"kū","radical":"口","leaves":[{"c":"口","py":"kǒu","vi":"cái miệng"},{"c":"犬","py":"quǎn","vi":"con chó"}]},"啤":{"py":"pí","radical":"口","leaves":[{"c":"口","py":"kǒu","vi":"cái miệng"},{"c":"卑","py":"bēi","vi":"thấp hèn"}]},"嘴":{"py":"zuǐ","radical":"口","leaves":[{"c":"口","py":"kǒu","vi":"cái miệng"},{"c":"觜","py":"zī","vi":"mỏ chim (cổ)"}]},"园":{"py":"yuán","radical":"囗","leaves":[{"c":"囗","py":"wéi","vi":"vây quanh, bao quanh"},{"c":"元","py":"yuán","vi":"gốc, đầu tiên"}]},"国":{"py":"guó","radical":"囗","leaves":[{"c":"囗","py":"wéi","vi":"vây quanh, bao quanh"},{"c":"玉","py":"yù","vi":"ngọc"}]},"图":{"py":"tú","radical":"囗","leaves":[{"c":"囗","py":"wéi","vi":"vây quanh, bao quanh"},{"c":"冬","py":"dōng","vi":"mùa đông"}]},"地":{"py":"de","radical":"土","leaves":[{"c":"土","py":"tǔ","vi":"đất"},{"c":"也","py":"yě","vi":"cũng, vậy"}]},"坏":{"py":"huài","radical":"土","leaves":[{"c":"土","py":"tǔ","vi":"đất"},{"c":"不","py":"bù","vi":"không, phủ định"}]},"城":{"py":"chéng","radical":"土","leaves":[{"c":"土","py":"tǔ","vi":"đất"},{"c":"成","py":"chéng","vi":"hoàn thành, trở thành"}]},"境":{"py":"jìng","radical":"土","leaves":[{"c":"土","py":"tǔ","vi":"đất"},{"c":"竟","py":"jìng","vi":"cuối cùng, trọn vẹn"}]},"声":{"py":"shēng","radical":"士","leaves":[{"c":"士","py":"shì","vi":"kẻ sĩ, người có học"}]},"复":{"py":"fù","radical":"夊","leaves":[{"c":"亻","py":"rén","vi":"người (bộ đứng)"},{"c":"日","py":"rì","vi":"mặt trời, ngày"},{"c":"夂","py":"zhǐ","vi":"bước chân đi xuống (cổ)"}]},"夏":{"py":"xià","radical":"夊","leaves":[{"c":"一","py":"yī","vi":"một, nét ngang"},{"c":"自","py":"zì","vi":"tự mình"},{"c":"夂","py":"zhǐ","vi":"bước chân đi xuống (cổ)"}]},"外":{"py":"wài","radical":"夕","leaves":[{"c":"夕","py":"xī","vi":"buổi tối"},{"c":"卜","py":"bo","vi":"bói toán"}]},"天":{"py":"tiān","radical":"大","leaves":[{"c":"一","py":"yī","vi":"một, nét ngang"},{"c":"大","py":"dà","vi":"to lớn"}]},"太":{"py":"tài","radical":"大","leaves":[{"c":"大","py":"dà","vi":"to lớn"},{"c":"丶","py":"diǎn","vi":"nét chấm"}]},"头":{"py":"tóu","radical":"大","leaves":[{"c":"⺀","py":"","vi":"băng giá (biến thể bộ băng)"},{"c":"大","py":"dà","vi":"to lớn"}]},"奇":{"py":"qí","radical":"大","leaves":[{"c":"大","py":"dà","vi":"to lớn"},{"c":"可","py":"kě","vi":"có thể"}]},"姨":{"py":"yí","radical":"女","leaves":[{"c":"女","py":"nǚ","vi":"con gái, phụ nữ"},{"c":"夷","py":"yí","vi":"người rợ (cổ), bằng phẳng"}]},"婚":{"py":"hūn","radical":"女","leaves":[{"c":"女","py":"nǚ","vi":"con gái, phụ nữ"},{"c":"昏","py":"hūn","vi":"hoàng hôn, mờ tối"}]},"子":{"py":"zi","radical":"子","leaves":[{"c":"了","py":"le","vi":"rồi, xong"},{"c":"一","py":"yī","vi":"một, nét ngang"}]},"季":{"py":"jì","radical":"子","leaves":[{"c":"禾","py":"hé","vi":"cây lúa"},{"c":"子","py":"zi","vi":"con"}]},"学":{"py":"xué","radical":"子","leaves":[{"c":"⺍","py":"","vi":"nhỏ (biến thể bộ tiểu)"},{"c":"冖","py":"mì","vi":"khăn trùm, nắp đậy"},{"c":"子","py":"zi","vi":"con"}]},"安":{"py":"ān","radical":"宀","leaves":[{"c":"宀","py":"gài","vi":"mái nhà (bộ miên)"},{"c":"女","py":"nǚ","vi":"con gái, phụ nữ"}]},"完":{"py":"wán","radical":"宀","leaves":[{"c":"宀","py":"gài","vi":"mái nhà (bộ miên)"},{"c":"元","py":"yuán","vi":"gốc, đầu tiên"}]},"定":{"py":"dìng","radical":"宀","leaves":[{"c":"宀","py":"gài","vi":"mái nhà (bộ miên)"},{"c":"疋","py":"pǐ","vi":"tấm vải, chân (cổ)"}]},"客":{"py":"kè","radical":"宀","leaves":[{"c":"宀","py":"gài","vi":"mái nhà (bộ miên)"},{"c":"各","py":"gè","vi":"mỗi, các"}]},"室":{"py":"shì","radical":"宀","leaves":[{"c":"宀","py":"gài","vi":"mái nhà (bộ miên)"},{"c":"至","py":"zhì","vi":"đến, tới"}]},"害":{"py":"hài","radical":"宀","leaves":[{"c":"宀","py":"gài","vi":"mái nhà (bộ miên)"},{"c":"丰","py":"fēng","vi":"tươi tốt, đầy đặn"},{"c":"口","py":"kǒu","vi":"cái miệng"}]},"家":{"py":"jiā","radical":"宀","leaves":[{"c":"宀","py":"gài","vi":"mái nhà (bộ miên)"},{"c":"豕","py":"shǐ","vi":"con lợn (cổ)"}]},"容":{"py":"róng","radical":"宀","leaves":[{"c":"宀","py":"gài","vi":"mái nhà (bộ miên)"},{"c":"谷","py":"gǔ","vi":"thung lũng"}]},"宾":{"py":"bīn","radical":"宀","leaves":[{"c":"宀","py":"gài","vi":"mái nhà (bộ miên)"},{"c":"兵","py":"bīng","vi":"binh lính"}]},"层":{"py":"céng","radical":"尸","leaves":[{"c":"尸","py":"shī","vi":"xác chết, thây (bộ thi)"},{"c":"云","py":"yún","vi":"mây"}]},"居":{"py":"jū","radical":"户","leaves":[{"c":"户","py":"hù","vi":"cửa, hộ gia đình"},{"c":"古","py":"gǔ","vi":"cổ xưa"}]},"山":{"py":"shān","radical":"山","leaves":[{"c":"凵","py":"qiǎn","vi":"cái hố, miệng há"},{"c":"丨","py":"shù","vi":"nét sổ thẳng"}]},"差":{"py":"chà","radical":"工","leaves":[{"c":"羊","py":"yáng","vi":"con dê, cừu"},{"c":"工","py":"gōng","vi":"công việc, thợ"}]},"己":{"py":"jǐ","radical":"己","leaves":[{"c":"乚","py":"gōu","vi":"nét móc"}]},"市":{"py":"shì","radical":"巾","leaves":[{"c":"亠","py":"tóu","vi":"nắp, đầu (bộ đầu)"},{"c":"巾","py":"jīn","vi":"khăn vải"}]},"带":{"py":"dài","radical":"巾","leaves":[{"c":"卅","py":"sà","vi":"ba mươi"},{"c":"冖","py":"mì","vi":"khăn trùm, nắp đậy"},{"c":"巾","py":"jīn","vi":"khăn vải"}]},"帮":{"py":"bāng","radical":"巾","leaves":[{"c":"邦","py":"bāng","vi":"đất nước, bang"},{"c":"巾","py":"jīn","vi":"khăn vải"}]},"帽":{"py":"mào","radical":"巾","leaves":[{"c":"巾","py":"jīn","vi":"khăn vải"},{"c":"冒","py":"mào","vi":"liều lĩnh, xông ra"}]},"年":{"py":"nián","radical":"干","leaves":[{"c":"干","py":"gàn","vi":"khô; can dự"}]},"康":{"py":"kāng","radical":"广","leaves":[{"c":"广","py":"guǎng","vi":"rộng lớn; mái hiên (bộ nghiễm)"},{"c":"隶","py":"lì","vi":"theo, lệ thuộc"}]},"开":{"py":"kāi","radical":"廾","leaves":[{"c":"一","py":"yī","vi":"một, nét ngang"},{"c":"廾","py":"gǒng","vi":"hai tay nâng lên (cổ)"}]},"张":{"py":"zhāng","radical":"弓","leaves":[{"c":"弓","py":"gōng","vi":"cây cung"},{"c":"长","py":"zhǎng","vi":"dài; lớn lên"}]},"影":{"py":"yǐng","radical":"彡","leaves":[{"c":"景","py":"jǐng","vi":"cảnh vật, ánh sáng"},{"c":"彡","py":"shān","vi":"vệt lông, nét trang trí"}]},"得":{"py":"dé","radical":"彳","leaves":[{"c":"彳","py":"chì","vi":"bước chân trái, đi chậm"},{"c":"旦","py":"dàn","vi":"bình minh"},{"c":"寸","py":"cùn","vi":"tấc (đơn vị đo)"}]},"微":{"py":"wēi","radical":"彳","leaves":[{"c":"彳","py":"chì","vi":"bước chân trái, đi chậm"},{"c":"山","py":"shān","vi":"núi"},{"c":"兀","py":"wù","vi":"trơ trọi, cao vòi vọi"},{"c":"攵","py":"pū","vi":"gõ nhẹ, đánh (bộ phốc)"}]},"心":{"py":"xīn","radical":"心","leaves":[]},"必":{"py":"bì","radical":"心","leaves":[{"c":"心","py":"xīn","vi":"trái tim, tâm trí"},{"c":"丿","py":"piě","vi":"nét phẩy"}]},"忘":{"py":"wàng","radical":"心","leaves":[{"c":"亡","py":"wáng","vi":"mất, chết, trốn"},{"c":"心","py":"xīn","vi":"trái tim, tâm trí"}]},"忙":{"py":"máng","radical":"忄","leaves":[{"c":"忄","py":"xīn","vi":"tim (bộ đứng)"},{"c":"亡","py":"wáng","vi":"mất, chết, trốn"}]},"怎":{"py":"zěn","radical":"心","leaves":[{"c":"乍","py":"zhà","vi":"chợt, thoạt tiên"},{"c":"心","py":"xīn","vi":"trái tim, tâm trí"}]},"怕":{"py":"pà","radical":"忄","leaves":[{"c":"忄","py":"xīn","vi":"tim (bộ đứng)"},{"c":"白","py":"bái","vi":"màu trắng"}]},"急":{"py":"jí","radical":"心","leaves":[{"c":"刍","py":"chú","vi":"cắt cỏ khô"},{"c":"心","py":"xīn","vi":"trái tim, tâm trí"}]},"怪":{"py":"guài","radical":"忄","leaves":[{"c":"忄","py":"xīn","vi":"tim (bộ đứng)"},{"c":"圣","py":"shèng","vi":"thánh"}]},"情":{"py":"qíng","radical":"忄","leaves":[{"c":"忄","py":"xīn","vi":"tim (bộ đứng)"},{"c":"青","py":"qīng","vi":"màu xanh"}]},"惯":{"py":"guàn","radical":"忄","leaves":[{"c":"忄","py":"xīn","vi":"tim (bộ đứng)"},{"c":"贯","py":"guàn","vi":"xâu chuỗi, quán xuyến"}]},"意":{"py":"yì","radical":"心","leaves":[{"c":"音","py":"yīn","vi":"âm thanh"},{"c":"心","py":"xīn","vi":"trái tim, tâm trí"}]},"感":{"py":"gǎn","radical":"心","leaves":[{"c":"咸","py":"xián","vi":"đều, tất cả (cổ)"},{"c":"心","py":"xīn","vi":"trái tim, tâm trí"}]},"愿":{"py":"yuàn","radical":"心","leaves":[{"c":"原","py":"yuán","vi":"nguồn gốc, cánh đồng"},{"c":"心","py":"xīn","vi":"trái tim, tâm trí"}]},"戏":{"py":"xì","radical":"戈","leaves":[{"c":"又","py":"yòu","vi":"lại một lần nữa; tay phải (cổ)"},{"c":"戈","py":"gē","vi":"cây giáo, vũ khí cổ"}]},"成":{"py":"chéng","radical":"戈","leaves":[{"c":"丁","py":"dīng","vi":"cái đinh"},{"c":"戈","py":"gē","vi":"cây giáo, vũ khí cổ"}]},"房":{"py":"fáng","radical":"户","leaves":[{"c":"户","py":"hù","vi":"cửa, hộ gia đình"},{"c":"方","py":"fāng","vi":"vuông, phương hướng"}]},"打":{"py":"dǎ","radical":"扌","leaves":[{"c":"扌","py":"shǒu","vi":"tay (bộ đứng)"},{"c":"丁","py":"dīng","vi":"cái đinh"}]},"扫":{"py":"sǎo","radical":"扌","leaves":[{"c":"扌","py":"shǒu","vi":"tay (bộ đứng)"},{"c":"彐","py":"jì","vi":"đầu con lợn (cổ)"}]},"把":{"py":"bǎ","radical":"扌","leaves":[{"c":"扌","py":"shǒu","vi":"tay (bộ đứng)"},{"c":"巴","py":"bā","vi":"bám chặt (cổ)"}]},"抱":{"py":"bào","radical":"扌","leaves":[{"c":"扌","py":"shǒu","vi":"tay (bộ đứng)"},{"c":"包","py":"bāo","vi":"gói, bọc"}]},"担":{"py":"dān","radical":"扌","leaves":[{"c":"扌","py":"shǒu","vi":"tay (bộ đứng)"},{"c":"旦","py":"dàn","vi":"bình minh"}]},"择":{"py":"zé","radical":"扌","leaves":[{"c":"扌","py":"shǒu","vi":"tay (bộ đứng)"}]},"换":{"py":"huàn","radical":"扌","leaves":[{"c":"扌","py":"shǒu","vi":"tay (bộ đứng)"},{"c":"奂","py":"huàn","vi":"sáng rực, tráng lệ"}]},"据":{"py":"jù","radical":"扌","leaves":[{"c":"扌","py":"shǒu","vi":"tay (bộ đứng)"},{"c":"居","py":"jū","vi":"ở, cư trú"}]},"接":{"py":"jiē","radical":"扌","leaves":[{"c":"扌","py":"shǒu","vi":"tay (bộ đứng)"},{"c":"妾","py":"qiè","vi":"nàng hầu, thiếp"}]},"搬":{"py":"bān","radical":"扌","leaves":[{"c":"扌","py":"shǒu","vi":"tay (bộ đứng)"},{"c":"般","py":"bān","vi":"loại, giống như"}]},"放":{"py":"fàng","radical":"攵","leaves":[{"c":"方","py":"fāng","vi":"vuông, phương hướng"},{"c":"攵","py":"pū","vi":"gõ nhẹ, đánh (bộ phốc)"}]},"敢":{"py":"gǎn","radical":"攵","leaves":[{"c":"耳","py":"ěr","vi":"cái tai"},{"c":"攵","py":"pū","vi":"gõ nhẹ, đánh (bộ phốc)"}]},"数":{"py":"shù","radical":"攵","leaves":[{"c":"娄","py":"lóu","vi":"trống rỗng (cổ)"},{"c":"攵","py":"pū","vi":"gõ nhẹ, đánh (bộ phốc)"}]},"文":{"py":"wén","radical":"文","leaves":[{"c":"亠","py":"tóu","vi":"nắp, đầu (bộ đầu)"},{"c":"乂","py":"yì","vi":"cắt cỏ, trị lý"}]},"料":{"py":"liào","radical":"斗","leaves":[{"c":"米","py":"mǐ","vi":"gạo"},{"c":"斗","py":"dòu","vi":"cái đấu (đong lường); đấu tranh"}]},"新":{"py":"xīn","radical":"斤","leaves":[{"c":"亲","py":"qīn","vi":"thân thích, ruột thịt"},{"c":"斤","py":"jīn","vi":"cân, cái rìu"}]},"方":{"py":"fāng","radical":"方","leaves":[{"c":"亠","py":"tóu","vi":"nắp, đầu (bộ đầu)"}]},"日":{"py":"rì","radical":"日","leaves":[{"c":"口","py":"kǒu","vi":"cái miệng"},{"c":"一","py":"yī","vi":"một, nét ngang"}]},"旧":{"py":"jiù","radical":"日","leaves":[{"c":"丨","py":"shù","vi":"nét sổ thẳng"},{"c":"日","py":"rì","vi":"mặt trời, ngày"}]},"明":{"py":"míng","radical":"日","leaves":[{"c":"日","py":"rì","vi":"mặt trời, ngày"},{"c":"月","py":"yuè","vi":"mặt trăng, tháng"}]},"易":{"py":"yì","radical":"日","leaves":[{"c":"日","py":"rì","vi":"mặt trời, ngày"},{"c":"勿","py":"wù","vi":"chớ, đừng"}]},"春":{"py":"chūn","radical":"日","leaves":[{"c":"日","py":"rì","vi":"mặt trời, ngày"}]},"普":{"py":"pǔ","radical":"日","leaves":[{"c":"並","py":"bìng","vi":"cùng nhau, song song"},{"c":"日","py":"rì","vi":"mặt trời, ngày"}]},"最":{"py":"zuì","radical":"曰","leaves":[{"c":"日","py":"rì","vi":"mặt trời, ngày"},{"c":"取","py":"qǔ","vi":"lấy"}]},"月":{"py":"yuè","radical":"月","leaves":[{"c":"冂","py":"jiōng","vi":"vùng biên, khung ngoài"},{"c":"二","py":"èr","vi":"hai"}]},"服":{"py":"fú","radical":"月","leaves":[{"c":"月","py":"yuè","vi":"mặt trăng, tháng"},{"c":"卩","py":"jié","vi":"đốt tre, người quỳ (cổ)"},{"c":"又","py":"yòu","vi":"lại một lần nữa; tay phải (cổ)"}]},"末":{"py":"mò","radical":"木","leaves":[{"c":"木","py":"mù","vi":"cây gỗ"},{"c":"一","py":"yī","vi":"một, nét ngang"}]},"本":{"py":"běn","radical":"木","leaves":[{"c":"木","py":"mù","vi":"cây gỗ"},{"c":"一","py":"yī","vi":"một, nét ngang"}]},"朵":{"py":"duǒ","radical":"木","leaves":[{"c":"几","py":"jǐ","vi":"cái bàn nhỏ, mấy"},{"c":"木","py":"mù","vi":"cây gỗ"}]},"机":{"py":"jī","radical":"木","leaves":[{"c":"木","py":"mù","vi":"cây gỗ"},{"c":"几","py":"jǐ","vi":"cái bàn nhỏ, mấy"}]},"李":{"py":"lǐ","radical":"木","leaves":[{"c":"木","py":"mù","vi":"cây gỗ"},{"c":"子","py":"zi","vi":"con"}]},"束":{"py":"shù","radical":"木","leaves":[{"c":"木","py":"mù","vi":"cây gỗ"},{"c":"口","py":"kǒu","vi":"cái miệng"}]},"条":{"py":"tiáo","radical":"木","leaves":[{"c":"夂","py":"zhǐ","vi":"bước chân đi xuống (cổ)"},{"c":"木","py":"mù","vi":"cây gỗ"}]},"来":{"py":"lái","radical":"木","leaves":[{"c":"未","py":"wèi","vi":"chưa"},{"c":"丷","py":"ha","vi":"hai nét chia (biến thể bộ bát)"}]},"板":{"py":"bǎn","radical":"木","leaves":[{"c":"木","py":"mù","vi":"cây gỗ"},{"c":"反","py":"fǎn","vi":"trái lại, lật lại"}]},"果":{"py":"guǒ","radical":"木","leaves":[{"c":"田","py":"tián","vi":"ruộng"},{"c":"木","py":"mù","vi":"cây gỗ"}]},"查":{"py":"chá","radical":"木","leaves":[{"c":"木","py":"mù","vi":"cây gỗ"},{"c":"旦","py":"dàn","vi":"bình minh"}]},"校":{"py":"xiào","radical":"木","leaves":[{"c":"木","py":"mù","vi":"cây gỗ"},{"c":"交","py":"jiāo","vi":"giao nhau, gặp gỡ"}]},"根":{"py":"gēn","radical":"木","leaves":[{"c":"木","py":"mù","vi":"cây gỗ"},{"c":"艮","py":"gěn","vi":"cứng đầu (quẻ Cấn)"}]},"梯":{"py":"tī","radical":"木","leaves":[{"c":"木","py":"mù","vi":"cây gỗ"},{"c":"弟","py":"dì","vi":"em trai"}]},"检":{"py":"jiǎn","radical":"木","leaves":[{"c":"木","py":"mù","vi":"cây gỗ"},{"c":"佥","py":"qiān","vi":"đều, tất cả (cổ)"}]},"楚":{"py":"chǔ","radical":"木","leaves":[{"c":"林","py":"lín","vi":"rừng cây"},{"c":"疋","py":"pǐ","vi":"tấm vải, chân (cổ)"}]},"楼":{"py":"lóu","radical":"木","leaves":[{"c":"木","py":"mù","vi":"cây gỗ"},{"c":"娄","py":"lóu","vi":"trống rỗng (cổ)"}]},"段":{"py":"duàn","radical":"殳","leaves":[{"c":"殳","py":"shū","vi":"cây gậy, binh khí cổ"}]},"比":{"py":"bǐ","radical":"比","leaves":[{"c":"匕","py":"bǐ","vi":"cái thìa (cổ)"}]},"汁":{"py":"zhī","radical":"氵","leaves":[{"c":"氵","py":"shuǐ","vi":"nước (bộ đứng)"},{"c":"十","py":"shí","vi":"mười"}]},"求":{"py":"qiú","radical":"氺","leaves":[{"c":"一","py":"yī","vi":"một, nét ngang"},{"c":"氺","py":"shui","vi":"nước (biến thể)"}]},"法":{"py":"fǎ","radical":"氵","leaves":[{"c":"氵","py":"shuǐ","vi":"nước (bộ đứng)"},{"c":"去","py":"qù","vi":"đi, rời khỏi"}]},"注":{"py":"zhù","radical":"氵","leaves":[{"c":"氵","py":"shuǐ","vi":"nước (bộ đứng)"},{"c":"主","py":"zhǔ","vi":"chủ, chính"}]},"洗":{"py":"xǐ","radical":"氵","leaves":[{"c":"氵","py":"shuǐ","vi":"nước (bộ đứng)"},{"c":"先","py":"xiān","vi":"trước"}]},"清":{"py":"qīng","radical":"氵","leaves":[{"c":"氵","py":"shuǐ","vi":"nước (bộ đứng)"},{"c":"青","py":"qīng","vi":"màu xanh"}]},"渴":{"py":"kě","radical":"氵","leaves":[{"c":"氵","py":"shuǐ","vi":"nước (bộ đứng)"},{"c":"曷","py":"hé","vi":"sao mà, thế nào (cổ)"}]},"游":{"py":"yóu","radical":"氵","leaves":[{"c":"氵","py":"shuǐ","vi":"nước (bộ đứng)"},{"c":"斿","py":"yóu","vi":"cờ phướn bay (cổ)"}]},"满":{"py":"mǎn","radical":"氵","leaves":[{"c":"氵","py":"shuǐ","vi":"nước (bộ đứng)"},{"c":"艹","py":"cǎo","vi":"cỏ (bộ đứng)"},{"c":"两","py":"liǎng","vi":"hai, cả hai"}]},"澡":{"py":"zǎo","radical":"氵","leaves":[{"c":"氵","py":"shuǐ","vi":"nước (bộ đứng)"},{"c":"喿","py":"zào","vi":"chim kêu ồn ào (cổ)"}]},"灯":{"py":"dēng","radical":"火","leaves":[{"c":"火","py":"huǒ","vi":"lửa"},{"c":"丁","py":"dīng","vi":"cái đinh"}]},"点":{"py":"diǎn","radical":"灬","leaves":[{"c":"占","py":"zhàn","vi":"chiếm giữ, xem bói"},{"c":"灬","py":"huǒ","vi":"lửa (bốn chấm)"}]},"烧":{"py":"shāo","radical":"火","leaves":[{"c":"火","py":"huǒ","vi":"lửa"},{"c":"尧","py":"yáo","vi":"cao vòi vọi (tên vua Nghiêu)"}]},"热":{"py":"rè","radical":"灬","leaves":[{"c":"执","py":"zhí","vi":"nắm giữ, chấp hành"},{"c":"灬","py":"huǒ","vi":"lửa (bốn chấm)"}]},"然":{"py":"rán","radical":"灬","leaves":[{"c":"肰","py":"rán","vi":"gốc cổ của chữ 然"},{"c":"灬","py":"huǒ","vi":"lửa (bốn chấm)"}]},"照":{"py":"zhào","radical":"灬","leaves":[{"c":"昭","py":"zhāo","vi":"sáng tỏ"},{"c":"灬","py":"huǒ","vi":"lửa (bốn chấm)"}]},"熊":{"py":"xióng","radical":"灬","leaves":[{"c":"能","py":"néng","vi":"có thể, năng lực"},{"c":"灬","py":"huǒ","vi":"lửa (bốn chấm)"}]},"爬":{"py":"pá","radical":"爪","leaves":[{"c":"爪","py":"zhǎo","vi":"móng vuốt"},{"c":"巴","py":"bā","vi":"bám chặt (cổ)"}]},"片":{"py":"piàn","radical":"片","leaves":[]},"牙":{"py":"yá","radical":"牙","leaves":[]},"物":{"py":"wù","radical":"牛","leaves":[{"c":"牛","py":"niú","vi":"con trâu, bò"},{"c":"勿","py":"wù","vi":"chớ, đừng"}]},"猫":{"py":"māo","radical":"犭","leaves":[{"c":"犭","py":"quǎn","vi":"chó (bộ đứng)"},{"c":"苗","py":"miáo","vi":"mầm cây, mạ non"}]},"环":{"py":"huán","radical":"王","leaves":[{"c":"王","py":"wáng","vi":"vua"},{"c":"不","py":"bù","vi":"không, phủ định"}]},"现":{"py":"xiàn","radical":"王","leaves":[{"c":"王","py":"wáng","vi":"vua"},{"c":"见","py":"jiàn","vi":"nhìn thấy"}]},"班":{"py":"bān","radical":"王","leaves":[{"c":"王","py":"wáng","vi":"vua"},{"c":"刂","py":"dāo","vi":"dao (bộ đứng)"}]},"理":{"py":"lǐ","radical":"王","leaves":[{"c":"王","py":"wáng","vi":"vua"},{"c":"里","py":"lǐ","vi":"dặm; bên trong"}]},"甜":{"py":"tián","radical":"甘","leaves":[{"c":"舌","py":"shé","vi":"cái lưỡi"},{"c":"甘","py":"gān","vi":"ngọt"}]},"用":{"py":"yòng","radical":"用","leaves":[{"c":"冂","py":"jiōng","vi":"vùng biên, khung ngoài"}]},"电":{"py":"diàn","radical":"曰","leaves":[{"c":"曰","py":"yuē","vi":"nói rằng (cổ)"},{"c":"乚","py":"gōu","vi":"nét móc"}]},"画":{"py":"huà","radical":"田","leaves":[{"c":"一","py":"yī","vi":"một, nét ngang"},{"c":"凵","py":"qiǎn","vi":"cái hố, miệng há"},{"c":"田","py":"tián","vi":"ruộng"}]},"界":{"py":"jiè","radical":"田","leaves":[{"c":"田","py":"tián","vi":"ruộng"},{"c":"介","py":"jiè","vi":"ở giữa, giới thiệu"}]},"留":{"py":"liú","radical":"田","leaves":[{"c":"卯","py":"mǎo","vi":"chi Mão"},{"c":"田","py":"tián","vi":"ruộng"}]},"疼":{"py":"téng","radical":"疒","leaves":[{"c":"疒","py":"nè","vi":"bệnh tật (bộ nạch)"},{"c":"冬","py":"dōng","vi":"mùa đông"}]},"瘦":{"py":"shòu","radical":"疒","leaves":[{"c":"疒","py":"nè","vi":"bệnh tật (bộ nạch)"},{"c":"叟","py":"sǒu","vi":"ông già"}]},"白":{"py":"bái","radical":"白","leaves":[{"c":"日","py":"rì","vi":"mặt trời, ngày"}]},"盘":{"py":"pán","radical":"皿","leaves":[{"c":"舟","py":"zhōu","vi":"thuyền"},{"c":"皿","py":"mǐn","vi":"bát đĩa, đồ đựng"}]},"目":{"py":"mù","radical":"目","leaves":[{"c":"口","py":"kǒu","vi":"cái miệng"},{"c":"二","py":"èr","vi":"hai"}]},"相":{"py":"xiāng","radical":"目","leaves":[{"c":"木","py":"mù","vi":"cây gỗ"},{"c":"目","py":"mù","vi":"con mắt"}]},"真":{"py":"zhēn","radical":"目","leaves":[{"c":"直","py":"zhí","vi":"thẳng"},{"c":"几","py":"jǐ","vi":"cái bàn nhỏ, mấy"}]},"着":{"py":"zhe","radical":"目","leaves":[{"c":"羊","py":"yáng","vi":"con dê, cừu"},{"c":"目","py":"mù","vi":"con mắt"}]},"短":{"py":"duǎn","radical":"矢","leaves":[{"c":"矢","py":"shǐ","vi":"mũi tên"},{"c":"豆","py":"dòu","vi":"hạt đậu"}]},"矮":{"py":"ǎi","radical":"矢","leaves":[{"c":"矢","py":"shǐ","vi":"mũi tên"},{"c":"委","py":"wěi","vi":"uỷ thác, quanh co"}]},"碗":{"py":"wǎn","radical":"石","leaves":[{"c":"石","py":"shí","vi":"đá"},{"c":"宛","py":"wǎn","vi":"như thể, uyển chuyển"}]},"示":{"py":"shì","radical":"示","leaves":[{"c":"二","py":"èr","vi":"hai"},{"c":"小","py":"xiǎo","vi":"nhỏ"}]},"礼":{"py":"lǐ","radical":"礻","leaves":[{"c":"礻","py":"shì","vi":"thần linh, chỉ dẫn (bộ đứng)"},{"c":"乚","py":"gōu","vi":"nét móc"}]},"祝":{"py":"zhù","radical":"礻","leaves":[{"c":"礻","py":"shì","vi":"thần linh, chỉ dẫn (bộ đứng)"},{"c":"兄","py":"xiōng","vi":"anh trai"}]},"离":{"py":"lí","radical":"禸","leaves":[{"c":"亠","py":"tóu","vi":"nắp, đầu (bộ đầu)"},{"c":"凶","py":"xiōng","vi":"hung dữ, xấu"},{"c":"禸","py":"róu","vi":"vết chân thú (cổ)"}]},"秋":{"py":"qiū","radical":"禾","leaves":[{"c":"禾","py":"hé","vi":"cây lúa"},{"c":"火","py":"huǒ","vi":"lửa"}]},"种":{"py":"zhǒng","radical":"禾","leaves":[{"c":"禾","py":"hé","vi":"cây lúa"},{"c":"中","py":"zhōng","vi":"ở giữa"}]},"空":{"py":"kōng","radical":"穴","leaves":[{"c":"穴","py":"xué","vi":"cái hang"},{"c":"工","py":"gōng","vi":"công việc, thợ"}]},"突":{"py":"tū","radical":"穴","leaves":[{"c":"穴","py":"xué","vi":"cái hang"},{"c":"犬","py":"quǎn","vi":"con chó"}]},"站":{"py":"zhàn","radical":"立","leaves":[{"c":"立","py":"lì","vi":"đứng"},{"c":"占","py":"zhàn","vi":"chiếm giữ, xem bói"}]},"笔":{"py":"bǐ","radical":"⺮","leaves":[{"c":"⺮","py":"zhú","vi":"tre trúc (biến thể bộ trúc)"},{"c":"毛","py":"máo","vi":"lông"}]},"筷":{"py":"kuài","radical":"⺮","leaves":[{"c":"⺮","py":"zhú","vi":"tre trúc (biến thể bộ trúc)"},{"c":"快","py":"kuài","vi":"nhanh"}]},"简":{"py":"jiǎn","radical":"⺮","leaves":[{"c":"⺮","py":"zhú","vi":"tre trúc (biến thể bộ trúc)"},{"c":"间","py":"jiān","vi":"khoảng giữa, gian phòng"}]},"算":{"py":"suàn","radical":"⺮","leaves":[{"c":"⺮","py":"zhú","vi":"tre trúc (biến thể bộ trúc)"},{"c":"具","py":"jù","vi":"công cụ, có đủ"}]},"箱":{"py":"xiāng","radical":"⺮","leaves":[{"c":"⺮","py":"zhú","vi":"tre trúc (biến thể bộ trúc)"},{"c":"相","py":"xiāng","vi":"lẫn nhau, tể tướng"}]},"米":{"py":"mǐ","radical":"米","leaves":[{"c":"丷","py":"ha","vi":"hai nét chia (biến thể bộ bát)"},{"c":"木","py":"mù","vi":"cây gỗ"}]},"糕":{"py":"gāo","radical":"米","leaves":[{"c":"米","py":"mǐ","vi":"gạo"},{"c":"羔","py":"gāo","vi":"cừu con"}]},"级":{"py":"jí","radical":"纟","leaves":[{"c":"纟","py":"sī","vi":"tơ, sợi (bộ đứng)"},{"c":"及","py":"jí","vi":"kịp, đến, và"}]},"终":{"py":"zhōng","radical":"纟","leaves":[{"c":"纟","py":"sī","vi":"tơ, sợi (bộ đứng)"},{"c":"冬","py":"dōng","vi":"mùa đông"}]},"经":{"py":"jīng","radical":"纟","leaves":[{"c":"纟","py":"sī","vi":"tơ, sợi (bộ đứng)"},{"c":"工","py":"gōng","vi":"công việc, thợ"}]},"结":{"py":"jié","radical":"纟","leaves":[{"c":"纟","py":"sī","vi":"tơ, sợi (bộ đứng)"},{"c":"吉","py":"jí","vi":"may mắn, tốt lành"}]},"绩":{"py":"jī","radical":"纟","leaves":[{"c":"纟","py":"sī","vi":"tơ, sợi (bộ đứng)"},{"c":"责","py":"zé","vi":"trách nhiệm"}]},"绿":{"py":"lǜ","radical":"纟","leaves":[{"c":"纟","py":"sī","vi":"tơ, sợi (bộ đứng)"},{"c":"录","py":"lù","vi":"ghi chép"}]},"网":{"py":"wǎng","radical":"网","leaves":[{"c":"冂","py":"jiōng","vi":"vùng biên, khung ngoài"},{"c":"乂","py":"yì","vi":"cắt cỏ, trị lý"}]},"老":{"py":"lǎo","radical":"老","leaves":[{"c":"耂","py":"lǎo","vi":"già (bộ đứng)"},{"c":"匕","py":"bǐ","vi":"cái thìa (cổ)"}]},"考":{"py":"kǎo","radical":"耂","leaves":[{"c":"耂","py":"lǎo","vi":"già (bộ đứng)"},{"c":"丂","py":"kǎo","vi":"thở khó (gốc cổ của 考)"}]},"而":{"py":"ér","radical":"而","leaves":[]},"耳":{"py":"ěr","radical":"耳","leaves":[{"c":"二","py":"èr","vi":"hai"}]},"聊":{"py":"liáo","radical":"耳","leaves":[{"c":"耳","py":"ěr","vi":"cái tai"},{"c":"卯","py":"mǎo","vi":"chi Mão"}]},"聪":{"py":"cōng","radical":"耳","leaves":[{"c":"耳","py":"ěr","vi":"cái tai"},{"c":"总","py":"zǒng","vi":"tổng, chung"}]},"育":{"py":"yù","radical":"⺼","leaves":[{"c":"亠","py":"tóu","vi":"nắp, đầu (bộ đầu)"},{"c":"厶","py":"sī","vi":"riêng tư (cổ)"},{"c":"⺼","py":"","vi":"thịt (biến thể bộ nhục)"}]},"胖":{"py":"pàng","radical":"⺼","leaves":[{"c":"⺼","py":"","vi":"thịt (biến thể bộ nhục)"},{"c":"半","py":"bàn","vi":"một nửa"}]},"脑":{"py":"nǎo","radical":"⺼","leaves":[{"c":"⺼","py":"","vi":"thịt (biến thể bộ nhục)"},{"c":"亠","py":"tóu","vi":"nắp, đầu (bộ đầu)"},{"c":"凶","py":"xiōng","vi":"hung dữ, xấu"}]},"脚":{"py":"jiǎo","radical":"⺼","leaves":[{"c":"⺼","py":"","vi":"thịt (biến thể bộ nhục)"},{"c":"却","py":"què","vi":"lại, trái lại"}]},"脸":{"py":"liǎn","radical":"⺼","leaves":[{"c":"⺼","py":"","vi":"thịt (biến thể bộ nhục)"},{"c":"佥","py":"qiān","vi":"đều, tất cả (cổ)"}]},"腿":{"py":"tuǐ","radical":"⺼","leaves":[{"c":"⺼","py":"","vi":"thịt (biến thể bộ nhục)"},{"c":"退","py":"tuì","vi":"lùi lại"}]},"自":{"py":"zì","radical":"自","leaves":[{"c":"目","py":"mù","vi":"con mắt"}]},"舒":{"py":"shū","radical":"舌","leaves":[{"c":"舍","py":"shě","vi":"nhà trọ; từ bỏ"},{"c":"予","py":"yǔ","vi":"cho, ban cho"}]},"航":{"py":"háng","radical":"舟","leaves":[{"c":"舟","py":"zhōu","vi":"thuyền"},{"c":"亢","py":"kàng","vi":"cao, ngạo mạn"}]},"船":{"py":"chuán","radical":"舟","leaves":[{"c":"舟","py":"zhōu","vi":"thuyền"},{"c":"几","py":"jǐ","vi":"cái bàn nhỏ, mấy"},{"c":"口","py":"kǒu","vi":"cái miệng"}]},"节":{"py":"jié","radical":"艹","leaves":[{"c":"艹","py":"cǎo","vi":"cỏ (bộ đứng)"}]},"花":{"py":"huā","radical":"艹","leaves":[{"c":"艹","py":"cǎo","vi":"cỏ (bộ đứng)"},{"c":"化","py":"huà","vi":"biến hoá"}]},"苦":{"py":"kǔ","radical":"艹","leaves":[{"c":"艹","py":"cǎo","vi":"cỏ (bộ đứng)"},{"c":"古","py":"gǔ","vi":"cổ xưa"}]},"草":{"py":"cǎo","radical":"艹","leaves":[{"c":"艹","py":"cǎo","vi":"cỏ (bộ đứng)"},{"c":"早","py":"zǎo","vi":"sớm"}]},"菜":{"py":"cài","radical":"艹","leaves":[{"c":"艹","py":"cǎo","vi":"cỏ (bộ đứng)"},{"c":"采","py":"cǎi","vi":"hái, thu thập"}]},"萄":{"py":"táo","radical":"艹","leaves":[{"c":"艹","py":"cǎo","vi":"cỏ (bộ đứng)"},{"c":"匋","py":"táo","vi":"đồ gốm (cổ)"}]},"落":{"py":"luò","radical":"艹","leaves":[{"c":"艹","py":"cǎo","vi":"cỏ (bộ đứng)"},{"c":"洛","py":"luò","vi":"sông Lạc (tên riêng)"}]},"葡":{"py":"pú","radical":"艹","leaves":[{"c":"艹","py":"cǎo","vi":"cỏ (bộ đứng)"},{"c":"匍","py":"pú","vi":"bò, trườn"}]},"蓝":{"py":"lán","radical":"艹","leaves":[{"c":"艹","py":"cǎo","vi":"cỏ (bộ đứng)"},{"c":"监","py":"jiān","vi":"giám sát"}]},"蕉":{"py":"jiāo","radical":"艹","leaves":[{"c":"艹","py":"cǎo","vi":"cỏ (bộ đứng)"},{"c":"焦","py":"jiāo","vi":"cháy khét, lo lắng"}]},"蛋":{"py":"dàn","radical":"虫","leaves":[{"c":"疋","py":"pǐ","vi":"tấm vải, chân (cổ)"},{"c":"虫","py":"chóng","vi":"sâu bọ, côn trùng"}]},"行":{"py":"xíng","radical":"行","leaves":[{"c":"彳","py":"chì","vi":"bước chân trái, đi chậm"},{"c":"亍","py":"chù","vi":"bước chân phải, đi chậm"}]},"衣":{"py":"yī","radical":"衣","leaves":[{"c":"亠","py":"tóu","vi":"nắp, đầu (bộ đầu)"}]},"表":{"py":"biǎo","radical":"衣","leaves":[{"c":"毛","py":"máo","vi":"lông"},{"c":"衣","py":"yī","vi":"áo"}]},"衫":{"py":"shān","radical":"衤","leaves":[{"c":"衤","py":"yī","vi":"áo (bộ đứng)"},{"c":"彡","py":"shān","vi":"vệt lông, nét trang trí"}]},"衬":{"py":"chèn","radical":"衤","leaves":[{"c":"衤","py":"yī","vi":"áo (bộ đứng)"},{"c":"寸","py":"cùn","vi":"tấc (đơn vị đo)"}]},"裙":{"py":"qún","radical":"衤","leaves":[{"c":"衤","py":"yī","vi":"áo (bộ đứng)"},{"c":"君","py":"jūn","vi":"vua, người quân tử"}]},"裤":{"py":"kù","radical":"衤","leaves":[{"c":"衤","py":"yī","vi":"áo (bộ đứng)"},{"c":"库","py":"kù","vi":"kho"}]},"要":{"py":"yào","radical":"覀","leaves":[{"c":"覀","py":"xī","vi":"che đậy (biến thể của 西)"},{"c":"女","py":"nǚ","vi":"con gái, phụ nữ"}]},"见":{"py":"jiàn","radical":"见","leaves":[{"c":"冂","py":"jiōng","vi":"vùng biên, khung ngoài"},{"c":"儿","py":"ér","vi":"con, trẻ nhỏ (bộ nhi đi chân)"}]},"角":{"py":"jiǎo","radical":"角","leaves":[{"c":"⺈","py":"","vi":"dao (biến thể bộ đao)"},{"c":"用","py":"yòng","vi":"dùng"}]},"解":{"py":"jiě","radical":"角","leaves":[{"c":"角","py":"jiǎo","vi":"cái sừng, góc"},{"c":"刀","py":"dāo","vi":"con dao"},{"c":"牛","py":"niú","vi":"con trâu, bò"}]},"认":{"py":"rèn","radical":"讠","leaves":[{"c":"讠","py":"yán","vi":"lời nói (bộ đứng)"},{"c":"人","py":"rén","vi":"người"}]},"议":{"py":"yì","radical":"讠","leaves":[{"c":"讠","py":"yán","vi":"lời nói (bộ đứng)"},{"c":"义","py":"yì","vi":"nghĩa, đạo nghĩa"}]},"记":{"py":"jì","radical":"讠","leaves":[{"c":"讠","py":"yán","vi":"lời nói (bộ đứng)"},{"c":"己","py":"jǐ","vi":"bản thân, chính mình"}]},"讲":{"py":"jiǎng","radical":"讠","leaves":[{"c":"讠","py":"yán","vi":"lời nói (bộ đứng)"},{"c":"井","py":"jǐng","vi":"cái giếng"}]},"诉":{"py":"sù","radical":"讠","leaves":[{"c":"讠","py":"yán","vi":"lời nói (bộ đứng)"},{"c":"斥","py":"chì","vi":"trách mắng, đuổi ra"}]},"词":{"py":"cí","radical":"讠","leaves":[{"c":"讠","py":"yán","vi":"lời nói (bộ đứng)"},{"c":"司","py":"sī","vi":"phụ trách, cơ quan"}]},"话":{"py":"huà","radical":"讠","leaves":[{"c":"讠","py":"yán","vi":"lời nói (bộ đứng)"},{"c":"舌","py":"shé","vi":"cái lưỡi"}]},"语":{"py":"yǔ","radical":"讠","leaves":[{"c":"讠","py":"yán","vi":"lời nói (bộ đứng)"},{"c":"吾","py":"wú","vi":"ta (cổ)"}]},"说":{"py":"shuō","radical":"讠","leaves":[{"c":"讠","py":"yán","vi":"lời nói (bộ đứng)"},{"c":"兑","py":"duì","vi":"trao đổi (quẻ Đoài)"}]},"读":{"py":"dú","radical":"讠","leaves":[{"c":"讠","py":"yán","vi":"lời nói (bộ đứng)"},{"c":"卖","py":"mài","vi":"bán"}]},"调":{"py":"diào","radical":"讠","leaves":[{"c":"讠","py":"yán","vi":"lời nói (bộ đứng)"},{"c":"周","py":"zhōu","vi":"chu kỳ, khắp"}]},"赛":{"py":"sài","radical":"贝","leaves":[{"c":"宀","py":"gài","vi":"mái nhà (bộ miên)"},{"c":"贝","py":"bèi","vi":"vỏ sò (tiền cổ)"}]},"起":{"py":"qǐ","radical":"走","leaves":[{"c":"走","py":"zǒu","vi":"đi bộ, chạy"},{"c":"己","py":"jǐ","vi":"bản thân, chính mình"}]},"超":{"py":"chāo","radical":"走","leaves":[{"c":"走","py":"zǒu","vi":"đi bộ, chạy"},{"c":"召","py":"zhào","vi":"triệu tập, gọi đến"}]},"辆":{"py":"liàng","radical":"车","leaves":[{"c":"车","py":"chē","vi":"xe cộ"},{"c":"两","py":"liǎng","vi":"hai, cả hai"}]},"辛":{"py":"xīn","radical":"辛","leaves":[{"c":"立","py":"lì","vi":"đứng"},{"c":"十","py":"shí","vi":"mười"}]},"过":{"py":"guò","radical":"辶","leaves":[{"c":"辶","py":"chuò","vi":"đi (bộ sước)"},{"c":"寸","py":"cùn","vi":"tấc (đơn vị đo)"}]},"近":{"py":"jìn","radical":"辶","leaves":[{"c":"辶","py":"chuò","vi":"đi (bộ sước)"},{"c":"斤","py":"jīn","vi":"cân, cái rìu"}]},"还":{"py":"hái","radical":"辶","leaves":[{"c":"辶","py":"chuò","vi":"đi (bộ sước)"},{"c":"不","py":"bù","vi":"không, phủ định"}]},"迟":{"py":"chí","radical":"辶","leaves":[{"c":"辶","py":"chuò","vi":"đi (bộ sước)"},{"c":"尺","py":"chǐ","vi":"thước (đơn vị đo)"}]},"选":{"py":"xuǎn","radical":"辶","leaves":[{"c":"辶","py":"chuò","vi":"đi (bộ sước)"},{"c":"先","py":"xiān","vi":"trước"}]},"通":{"py":"tōng","radical":"辶","leaves":[{"c":"辶","py":"chuò","vi":"đi (bộ sước)"},{"c":"甬","py":"yǒng","vi":"lối đi có mái (cổ)"}]},"遇":{"py":"yù","radical":"辶","leaves":[{"c":"辶","py":"chuò","vi":"đi (bộ sước)"},{"c":"禺","py":"yú","vi":"loài khỉ (cổ)"}]},"邮":{"py":"yóu","radical":"阝","leaves":[{"c":"由","py":"yóu","vi":"từ, do"},{"c":"阝","py":"yì","vi":"gò đất / thành ấp (bộ phụ)"}]},"邻":{"py":"lín","radical":"阝","leaves":[{"c":"令","py":"lìng","vi":"ra lệnh, khiến cho"},{"c":"阝","py":"yì","vi":"gò đất / thành ấp (bộ phụ)"}]},"酒":{"py":"jiǔ","radical":"酉","leaves":[{"c":"氵","py":"shuǐ","vi":"nước (bộ đứng)"},{"c":"酉","py":"yǒu","vi":"chi Dậu, rượu"}]},"重":{"py":"zhòng","radical":"里","leaves":[{"c":"千","py":"qiān","vi":"nghìn"},{"c":"里","py":"lǐ","vi":"dặm; bên trong"}]},"铁":{"py":"tiě","radical":"钅","leaves":[{"c":"钅","py":"jīn","vi":"kim loại (bộ đứng)"},{"c":"失","py":"shī","vi":"mất, để lỡ"}]},"铅":{"py":"qiān","radical":"钅","leaves":[{"c":"钅","py":"jīn","vi":"kim loại (bộ đứng)"},{"c":"几","py":"jǐ","vi":"cái bàn nhỏ, mấy"},{"c":"口","py":"kǒu","vi":"cái miệng"}]},"银":{"py":"yín","radical":"钅","leaves":[{"c":"钅","py":"jīn","vi":"kim loại (bộ đứng)"},{"c":"艮","py":"gěn","vi":"cứng đầu (quẻ Cấn)"}]},"长":{"py":"zhǎng","radical":"长","leaves":[{"c":"一","py":"yī","vi":"một, nét ngang"}]},"闻":{"py":"wén","radical":"门","leaves":[{"c":"门","py":"mén","vi":"cửa lớn"},{"c":"耳","py":"ěr","vi":"cái tai"}]},"阅":{"py":"yuè","radical":"门","leaves":[{"c":"门","py":"mén","vi":"cửa lớn"},{"c":"兑","py":"duì","vi":"trao đổi (quẻ Đoài)"}]},"阳":{"py":"yáng","radical":"阝","leaves":[{"c":"阝","py":"yì","vi":"gò đất / thành ấp (bộ phụ)"},{"c":"日","py":"rì","vi":"mặt trời, ngày"}]},"阿":{"py":"ā","radical":"阝","leaves":[{"c":"阝","py":"yì","vi":"gò đất / thành ấp (bộ phụ)"},{"c":"可","py":"kě","vi":"có thể"}]},"附":{"py":"fù","radical":"阝","leaves":[{"c":"阝","py":"yì","vi":"gò đất / thành ấp (bộ phụ)"},{"c":"付","py":"fù","vi":"trả, giao cho"}]},"降":{"py":"jiàng","radical":"阝","leaves":[{"c":"阝","py":"yì","vi":"gò đất / thành ấp (bộ phụ)"},{"c":"夅","py":"jiàng","vi":"đi xuống (cổ, gốc của 降)"}]},"除":{"py":"chú","radical":"阝","leaves":[{"c":"阝","py":"yì","vi":"gò đất / thành ấp (bộ phụ)"},{"c":"余","py":"yú","vi":"dư thừa; ta (cổ)"}]},"难":{"py":"nán","radical":"又","leaves":[{"c":"又","py":"yòu","vi":"lại một lần nữa; tay phải (cổ)"},{"c":"隹","py":"zhuī","vi":"chim đuôi ngắn (cổ)"}]},"雨":{"py":"yǔ","radical":"雨","leaves":[{"c":"帀","py":"zā","vi":"vòng quanh (cổ)"}]},"需":{"py":"xū","radical":"雨","leaves":[{"c":"雨","py":"yǔ","vi":"mưa"},{"c":"而","py":"ér","vi":"mà (liên từ)"}]},"静":{"py":"jìng","radical":"青","leaves":[{"c":"青","py":"qīng","vi":"màu xanh"},{"c":"争","py":"zhēng","vi":"tranh giành"}]},"面":{"py":"miàn","radical":"面","leaves":[]},"鞋":{"py":"xié","radical":"革","leaves":[{"c":"革","py":"gé","vi":"da thuộc, cải cách"},{"c":"圭","py":"guī","vi":"ngọc khuê (cổ)"}]},"音":{"py":"yīn","radical":"音","leaves":[{"c":"立","py":"lì","vi":"đứng"},{"c":"日","py":"rì","vi":"mặt trời, ngày"}]},"须":{"py":"xū","radical":"彡","leaves":[{"c":"彡","py":"shān","vi":"vệt lông, nét trang trí"},{"c":"页","py":"yè","vi":"trang giấy; đầu (bộ hiệt)"}]},"顾":{"py":"gù","radical":"页","leaves":[{"c":"厄","py":"è","vi":"khốn ách, tai hoạ"},{"c":"页","py":"yè","vi":"trang giấy; đầu (bộ hiệt)"}]},"风":{"py":"fēng","radical":"风","leaves":[{"c":"几","py":"jǐ","vi":"cái bàn nhỏ, mấy"},{"c":"乂","py":"yì","vi":"cắt cỏ, trị lý"}]},"飞":{"py":"fēi","radical":"飞","leaves":[]},"饭":{"py":"fàn","radical":"饣","leaves":[{"c":"饣","py":"shí","vi":"ăn (bộ đứng)"},{"c":"反","py":"fǎn","vi":"trái lại, lật lại"}]},"饮":{"py":"yǐn","radical":"饣","leaves":[{"c":"饣","py":"shí","vi":"ăn (bộ đứng)"},{"c":"欠","py":"qiàn","vi":"thiếu, ngáp"}]},"饱":{"py":"bǎo","radical":"饣","leaves":[{"c":"饣","py":"shí","vi":"ăn (bộ đứng)"},{"c":"包","py":"bāo","vi":"gói, bọc"}]},"馆":{"py":"guǎn","radical":"饣","leaves":[{"c":"饣","py":"shí","vi":"ăn (bộ đứng)"},{"c":"官","py":"guān","vi":"quan chức"}]},"香":{"py":"xiāng","radical":"香","leaves":[{"c":"禾","py":"hé","vi":"cây lúa"},{"c":"日","py":"rì","vi":"mặt trời, ngày"}]},"马":{"py":"mǎ","radical":"马","leaves":[{"c":"一","py":"yī","vi":"một, nét ngang"}]},"骑":{"py":"qí","radical":"马","leaves":[{"c":"马","py":"mǎ","vi":"con ngựa"},{"c":"奇","py":"qí","vi":"kỳ lạ"}]},"高":{"py":"gāo","radical":"高","leaves":[{"c":"亠","py":"tóu","vi":"nắp, đầu (bộ đầu)"},{"c":"口","py":"kǒu","vi":"cái miệng"},{"c":"冋","py":"jiōng","vi":"vùng biên xa (biến thể 冂)"}]},"鲜":{"py":"xiān","radical":"鱼","leaves":[{"c":"鱼","py":"yú","vi":"con cá"},{"c":"羊","py":"yáng","vi":"con dê, cừu"}]},"鸟":{"py":"niǎo","radical":"鸟","leaves":[]},"黑":{"py":"hēi","radical":"黑","leaves":[{"c":"灬","py":"huǒ","vi":"lửa (bốn chấm)"}]},"鼻":{"py":"bí","radical":"鼻","leaves":[{"c":"自","py":"zì","vi":"tự mình"},{"c":"畀","py":"bì","vi":"trao cho (cổ)"}]}};
 
 /* ---------- state: nhiều bộ từ vựng + phiên kiểm tra có kiểm soát ---------- */
-const APP_VERSION = 'v14';
+const APP_VERSION = 'v15';
 const LS = {
   decks:'zh_decks_v2', activeDeck:'zh_active_deck_v2',
   stats:'zh_stats_v2', queues:'zh_queues_v2',
@@ -832,97 +832,70 @@ function speakMatch(target, heard){
   return pinyinSim(t, h) >= 0.6;
 }
 
-let recognizer = null, isRecording = false;
+let isRecording = false;
 let micStream = null, audioCtx = null, analyser = null, micBarsRaf = null;
-let mediaRecorder = null, recordedChunks = [], isPlaybackRecording = false;
-function getRecognizer(){
-  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-  if(!SR) return null;
-  if(!recognizer){
-    recognizer = new SR();
-    recognizer.lang = 'zh-CN';
-    recognizer.continuous = false;
-    recognizer.interimResults = true; // hiện chữ ngay trong lúc nói, thay cho biểu đồ mức âm
-    recognizer.maxAlternatives = 1;
-  }
-  return recognizer;
+let mediaRecorder = null, recordedChunks = [], recordTimer = null, recordCountdown = null;
+const MAX_RECORD_MS = 5000;
+
+/* ---------- mô hình nhận diện giọng nói (Whisper, qua transformers.js) ----------
+   Chạy ngay trên trình duyệt của bạn (WebAssembly), không cần API key, không gửi giọng nói lên
+   server nào — chỉ cần tải mô hình (~70MB) một lần đầu tiên, các lần sau dùng lại cache của trình duyệt.
+   Đây là một thư viện/mô hình bên thứ ba (không phải của Anthropic) — nếu lần đầu dùng thấy lỗi lạ,
+   gửi lại nguyên văn thông báo lỗi để điều chỉnh tiếp. */
+let whisperPipeline = null, whisperLoadingPromise = null;
+function setAiStatus(text){ const el=$('#aiStatus'); if(el) el.textContent=text||''; }
+function loadWhisper(){
+  if(whisperPipeline) return Promise.resolve(whisperPipeline);
+  if(whisperLoadingPromise) return whisperLoadingPromise;
+  setAiStatus('Đang tải mô hình nhận diện AI (~70MB, chỉ tải 1 lần)...');
+  whisperLoadingPromise = (async ()=>{
+    try{
+      const { pipeline } = await import('https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2');
+      const p = await pipeline('automatic-speech-recognition', 'Xenova/whisper-tiny');
+      whisperPipeline = p;
+      setAiStatus('');
+      return p;
+    }catch(e){
+      setAiStatus('');
+      toast('Không tải được mô hình nhận diện AI: '+(e && e.message ? e.message : e));
+      whisperLoadingPromise = null;
+      return null;
+    }
+  })();
+  return whisperLoadingPromise;
 }
+
+/* ---------- ghi âm rồi mới phân tích (không còn vừa ghi vừa nhận diện cùng lúc) ----------
+   1) Bấm mic: chỉ MỞ MICRO ĐỂ GHI, tối đa 5 giây hoặc tới khi bấm dừng.
+   2) Bấm dừng (hoặc hết 5s): đóng hẳn luồng micro lại, rồi mới đưa đoạn ghi âm đó cho AI phân tích.
+   File ghi âm luôn giữ lại để phát lại được, không phụ thuộc việc phân tích đúng/sai. */
 function setMicState(state, text){
   const btn = $('#micBtn'), hint = $('#micHint'), box = $('#transcriptBox');
   if(!btn) return;
   btn.classList.toggle('recording', state==='listening');
-  if(state==='listening'){ btn.textContent='⏹'; if(hint) hint.textContent='Đang nghe... đọc to từ trên'; }
-  else { btn.textContent='🎤'; if(hint) hint.textContent = text ? 'Bấm micro để đọc lại' : 'Bấm micro rồi đọc to từ trên'; }
-  if(box && state!=='hearing') box.textContent = text ? ('Nghe được: '+text) : '';
-}
-
-/* ---------- ghi âm CHẤM ĐIỂM: chỉ dùng SpeechRecognition, KHÔNG mở thêm luồng micro nào khác ----------
-   Trên nhiều điện thoại Android, chỉ cần có thêm 1 luồng getUserMedia thứ hai chạy song song trong lúc
-   SpeechRecognition đang nghe là hệ thống sẽ "cướp" mất tín hiệu sạch của luồng nhận diện, khiến nó
-   không nhận ra gì dù micro vẫn ghi âm bình thường (kiểm chứng thực tế). Vì vậy nhánh chấm điểm này
-   phải giữ tuyệt đối đơn giản — không AudioContext, không MediaRecorder — để đảm bảo độ tin cậy. */
-async function toggleRecording(){
-  if(isRecording){ stopRecording(); return; }
-  if(isPlaybackRecording){ toast('Đang ghi âm để nghe lại — bấm dừng ghi âm đó trước đã'); return; }
-  const q = curQ();
-  if(!q || q.answered) return;
-  const rec = getRecognizer();
-  if(!rec){ toast('Trình duyệt này không hỗ trợ nhận diện giọng nói tiếng Trung. Hãy thử Chrome trên máy tính hoặc Android.'); return; }
-
-  isRecording = true;
-  setMicState('listening');
-  rec.onresult = e=>{
-    let finalText='', interimText='';
-    for(let i=e.resultIndex;i<e.results.length;i++){
-      const t = e.results[i][0].transcript;
-      if(e.results[i].isFinal) finalText += t; else interimText += t;
-    }
-    const box = $('#transcriptBox');
-    if(box) box.textContent = 'Đang nghe: '+(finalText||interimText||'...');
-    if(finalText) q.picked = finalText;
-  };
-  rec.onerror = e=>{
-    if(e.error==='not-allowed' || e.error==='service-not-allowed'){
-      toast('Trình duyệt/hệ thống chặn quyền micro. Cần mở app qua http(s) (không phải mở trực tiếp file .html) và cho phép quyền micro khi được hỏi.');
-    } else if(e.error==='no-speech'){
-      toast('Không nghe thấy giọng nói, thử lại nhé (nói to và gần micro hơn)');
-    } else if(e.error==='network'){
-      toast('Nhận diện giọng nói cần có mạng — kiểm tra lại kết nối internet rồi thử lại');
-    } else if(e.error!=='aborted'){
-      toast('Lỗi ghi âm: '+e.error);
-    }
-  };
-  rec.onend = ()=>{
-    isRecording = false;
-    setMicState('idle', q.picked);
-    if(q.picked){
-      $('#checkBtn').disabled = false;
-      // Đọc đúng rồi thì không bắt bấm "Kiểm tra" nữa — tự chấm luôn và chuyển thẳng sang câu tiếp theo.
-      if(!q.answered && speakMatch(q.w.hz, q.picked)) check();
-    }
-  };
-  try{ rec.start(); }catch(e){
-    isRecording=false; setMicState('idle');
-    toast('Không khởi động được micro');
+  btn.disabled = (state==='analyzing');
+  if(state==='listening'){
+    btn.textContent='⏹';
+  } else if(state==='analyzing'){
+    btn.textContent='⏳';
+    if(hint) hint.textContent='Đang phân tích giọng đọc...';
+    if(box) box.textContent='';
+  } else {
+    btn.textContent='🎤';
+    if(hint) hint.textContent = text ? 'Nghe ra: '+text+' — bấm micro để đọc lại' : 'Bấm micro rồi đọc to từ trên (tối đa 5 giây)';
+    if(box) box.textContent='';
+    renderPlaybackSlot();
   }
 }
-function stopRecording(){
-  if(recognizer && isRecording){ try{ recognizer.stop(); }catch(e){} }
-  isRecording = false;
-}
-
-/* ---------- ghi âm NGHE LẠI: nút riêng, hoàn toàn tách biệt với nhận diện ----------
-   Chỉ mở micro khi SpeechRecognition KHÔNG chạy, nên không còn xung đột phần cứng như trên.
-   Có vẽ mức âm thanh (equalizer) vì lúc này chỉ có một mình luồng này dùng micro. */
 function renderPlaybackSlot(){
   const slot = $('#playbackSlot'); if(!slot) return;
   const q = curQ();
-  if(q && q.audioUrl){
-    slot.innerHTML = '<button type="button" class="btn small ghost" id="playBackBtn">🔊 Nghe lại</button>';
-    $('#playBackBtn').onclick = ()=>{ new Audio(q.audioUrl).play().catch(()=>toast('Không phát lại được đoạn ghi âm')); };
-  } else {
-    slot.innerHTML = '';
-  }
+  let html = '';
+  if(q && q.audioUrl) html += '<button type="button" class="btn small ghost" id="playBackBtn">🔊 Nghe lại giọng bạn</button> ';
+  if(q && q.audioUrl && !q.answered) html += '<button type="button" class="btn small ghost" id="reanalyzeBtn">🔁 Phân tích lại</button>';
+  slot.innerHTML = html;
+  const pb=$('#playBackBtn'); if(pb) pb.onclick=()=>{ new Audio(q.audioUrl).play().catch(()=>toast('Không phát lại được đoạn ghi âm')); };
+  const rb=$('#reanalyzeBtn'); if(rb) rb.onclick=()=>analyzeRecording(q);
 }
 function startMicBars(stream){
   const bars = $$('#micBars i');
@@ -947,7 +920,7 @@ function startMicBars(stream){
       micBarsRaf = requestAnimationFrame(draw);
     };
     draw();
-  }catch(e){ /* không vẽ được thì bỏ qua */ }
+  }catch(e){ /* không vẽ được thì bỏ qua, không ảnh hưởng việc ghi âm */ }
 }
 function stopMicBars(){
   if(micBarsRaf){ cancelAnimationFrame(micBarsRaf); micBarsRaf=null; }
@@ -958,33 +931,15 @@ function stopMicBars(){
 function releaseMicStream(){
   if(micStream){ micStream.getTracks().forEach(t=>t.stop()); micStream=null; }
 }
-async function togglePlaybackRecording(){
-  const btn = $('#recPlaybackBtn');
-  if(isPlaybackRecording){
-    isPlaybackRecording = false;
-    stopMicBars();
-    const url = await new Promise(resolve=>{
-      if(!mediaRecorder || mediaRecorder.state==='inactive'){ resolve(null); return; }
-      mediaRecorder.onstop = ()=>{
-        try{
-          const blob = new Blob(recordedChunks, {type: mediaRecorder.mimeType || 'audio/webm'});
-          resolve(blob.size ? URL.createObjectURL(blob) : null);
-        }catch(e){ resolve(null); }
-      };
-      try{ mediaRecorder.stop(); }catch(e){ resolve(null); }
-    });
-    releaseMicStream();
-    if(btn){ btn.textContent = '🔴 Ghi âm để nghe lại'; btn.classList.remove('recording'); }
-    const q = curQ();
-    if(url && q){ if(q.audioUrl) URL.revokeObjectURL(q.audioUrl); q.audioUrl = url; }
-    renderPlaybackSlot();
-    return;
-  }
-  if(isRecording){ toast('Đang nhận diện giọng nói, đợi xong đã rồi ghi âm nghe lại'); return; }
+
+async function toggleRecording(){
+  if(isRecording){ stopRecording(); return; }
+  const q = curQ();
+  if(!q || q.answered) return;
   try{
     micStream = await navigator.mediaDevices.getUserMedia({audio:true});
   }catch(e){
-    toast('Trình duyệt/hệ thống chặn quyền micro. Cần mở app qua http(s) (không phải mở trực tiếp file .html).');
+    toast('Trình duyệt/hệ thống chặn quyền micro. Cần mở app qua http(s) (không phải mở trực tiếp file .html) và cho phép quyền micro khi được hỏi.');
     return;
   }
   recordedChunks = [];
@@ -993,16 +948,65 @@ async function togglePlaybackRecording(){
     mediaRecorder.ondataavailable = e=>{ if(e.data && e.data.size>0) recordedChunks.push(e.data); };
     mediaRecorder.start();
   }catch(e){ releaseMicStream(); toast('Không ghi âm được trên trình duyệt này'); return; }
-  isPlaybackRecording = true;
-  startMicBars(micStream);
-  if(btn){ btn.textContent = '⏹ Dừng ghi âm'; btn.classList.add('recording'); }
+
+  isRecording = true;
+  setMicState('listening');
+  let remain = Math.round(MAX_RECORD_MS/1000);
+  const hint = $('#micHint'); if(hint) hint.textContent='Đang ghi âm... còn '+remain+'s (bấm mic để dừng sớm)';
+  recordCountdown = setInterval(()=>{
+    remain--;
+    const h = $('#micHint');
+    if(h && isRecording) h.textContent = remain>0 ? ('Đang ghi âm... còn '+remain+'s (bấm mic để dừng sớm)') : 'Đang dừng ghi âm...';
+  }, 1000);
+  recordTimer = setTimeout(stopRecording, MAX_RECORD_MS);
 }
-function forceStopPlaybackRecording(){
-  if(!isPlaybackRecording) return;
-  isPlaybackRecording = false;
+function stopRecording(){
+  if(!isRecording) return;
+  isRecording = false;
+  clearTimeout(recordTimer); recordTimer=null;
+  clearInterval(recordCountdown); recordCountdown=null;
   stopMicBars();
-  try{ if(mediaRecorder && mediaRecorder.state!=='inactive') mediaRecorder.stop(); }catch(e){}
-  releaseMicStream();
+  const q = curQ();
+  setMicState('analyzing');
+  const stopPromise = new Promise(resolve=>{
+    if(!mediaRecorder || mediaRecorder.state==='inactive'){ resolve(null); return; }
+    mediaRecorder.onstop = ()=>{
+      try{
+        const blob = new Blob(recordedChunks, {type: mediaRecorder.mimeType || 'audio/webm'});
+        resolve(blob.size ? URL.createObjectURL(blob) : null);
+      }catch(e){ resolve(null); }
+    };
+    try{ mediaRecorder.stop(); }catch(e){ resolve(null); }
+  });
+  stopPromise.then(async url=>{
+    releaseMicStream();
+    if(!q) return; // đã chuyển câu/chuyển chế độ trong lúc đang ghi — bỏ qua kết quả này
+    if(url){ if(q.audioUrl) URL.revokeObjectURL(q.audioUrl); q.audioUrl = url; }
+    await analyzeRecording(q);
+  });
+}
+/* Phân tích đoạn đã ghi bằng Whisper — chạy SAU khi micro đã đóng hẳn, không còn tranh chấp phần cứng. */
+async function analyzeRecording(q){
+  if(!q || !q.audioUrl){ setMicState('idle', null); $('#checkBtn').disabled=false; return; }
+  setMicState('analyzing');
+  const pipe = await loadWhisper();
+  if(!pipe){
+    q.picked = null;
+    setMicState('idle', null);
+    $('#checkBtn').disabled = false; // vẫn cho xem đáp án dù không phân tích được
+    return;
+  }
+  try{
+    const output = await pipe(q.audioUrl, { language:'chinese', task:'transcribe' });
+    const text = normalizeHanzi((output && output.text) || '');
+    q.picked = text || null;
+  }catch(e){
+    toast('Lỗi phân tích giọng nói: '+(e && e.message ? e.message : e));
+    q.picked = null;
+  }
+  setMicState('idle', q.picked);
+  $('#checkBtn').disabled = false; // luôn bật — để còn bấm xem đáp án/nghe phát âm kể cả khi không nhận ra gì
+  if(q.picked && !q.answered && speakMatch(q.w.hz, q.picked)) check();
 }
 
 function newQuestion(){
@@ -1054,17 +1058,14 @@ function renderQuiz(){
   if(mode==='speak'){
     $('#options').innerHTML =
       '<div class="speak-box">'+
-        '<button type="button" class="mic-btn" id="micBtn" aria-label="Ghi âm để kiểm tra">🎤</button>'+
-        '<p class="hint" id="micHint">Bấm micro rồi đọc to từ trên</p>'+
+        '<button type="button" class="mic-btn" id="micBtn" aria-label="Ghi âm">🎤</button>'+
+        '<div class="mic-bars" id="micBars">'+'<i></i>'.repeat(9)+'</div>'+
+        '<p class="hint" id="micHint">Bấm micro rồi đọc to từ trên (tối đa 5 giây)</p>'+
+        '<p class="ai-status" id="aiStatus"></p>'+
         '<p class="transcript" id="transcriptBox"></p>'+
-        '<div class="playback-row">'+
-          '<button type="button" class="btn small ghost" id="recPlaybackBtn">🔴 Ghi âm để nghe lại</button>'+
-          '<div class="mic-bars" id="micBars">'+'<i></i>'.repeat(9)+'</div>'+
-        '</div>'+
         '<div id="playbackSlot"></div>'+
       '</div>';
     $('#micBtn').onclick = toggleRecording;
-    $('#recPlaybackBtn').onclick = togglePlaybackRecording;
     renderPlaybackSlot();
   } else {
     $('#options').innerHTML = q.opts.map((oi,k)=>
@@ -1111,8 +1112,39 @@ function check(){
   if(isSessionOver()){ startSession(true); newQuestion(); return; }
   const q = curQ(); if(!q) return;
   if(q.answered){ q.consumed=true; newQuestion(); return; }
-  if(mode==='speak'){ if(!q.picked) return; }
-  else if(q.picked===null) return;
+
+  if(mode==='speak' && !q.picked){
+    // Máy không nhận ra được câu vừa đọc (hoặc chưa ghi âm lần nào) — hiện đáp án để tham khảo,
+    // KHÔNG tính điểm / không ảnh hưởng tiến độ ghi nhớ của từ này, vì không chắc bạn đọc sai hay chỉ do máy nghe hụt.
+    q.answered = true; q.consumed = true;
+    stopRecording();
+    const w = q.w;
+    $('#options').innerHTML =
+      '<div class="speak-result no">'+
+        '<p>Không nhận diện được giọng đọc — không tính điểm cho câu này.</p>'+
+        '<p>Đáp án đúng: <b class="zh">'+esc(w.hz)+'</b> <span class="p">'+esc(w.py)+'</span></p>'+
+        '<div id="playbackSlot"></div>'+
+      '</div>';
+    renderPlaybackSlot();
+    const fb=$('#feedback');
+    fb.innerHTML =
+      '<div class="card-2col"><div class="card-main">'+
+      '<div class="fb-word"><span class="h zh">'+esc(w.hz)+'</span><span class="p">'+esc(w.py)+'</span>'+
+        (w.pos?'<span class="t">'+esc(w.pos)+'</span>':'')+'</div>'+
+      '<p class="fb-mean">'+esc(w.vi)+'</p>'+
+      (w.use?'<p class="fb-mean" style="color:var(--ink-soft);font-size:14px">Cách dùng: '+esc(w.use)+'</p>':'')+
+      (w.ex?'<div class="fb-ex"><div class="e zh">'+esc(w.ex)+'</div><div class="ep">'+esc(w.expy)+'</div><div class="ev">'+esc(w.exvi)+'</div></div>':'')+
+      analysisHTML(w.hz)+
+      '</div>'+wordVisualHTML(w,'fb-visual','big')+'</div>';
+    fb.classList.add('show');
+    $('#checkBtn').textContent='Câu tiếp theo';
+    $('#checkBtn').disabled=false;
+    $('#skipBtn').disabled=true;
+    speak(w.hz);
+    return;
+  }
+  if(mode!=='speak' && q.picked===null) return;
+
   q.answered = true; q.consumed = true;
   const w=q.w;
   const ok = mode==='speak' ? speakMatch(w.hz, q.picked) : (q.picked===q.answer);
@@ -1429,7 +1461,7 @@ async function pushToGithub(){
 
 /* ---------- view switching ---------- */
 function setView(v){
-  if(mode==='speak' && v!=='speak'){ stopRecording(); forceStopPlaybackRecording(); }
+  if(mode==='speak' && v!=='speak') stopRecording();
   mode=v;
   $$('.mode-btn').forEach(t=>t.setAttribute('aria-selected', t.dataset.view===v ? 'true':'false'));
   $('#view-quiz').classList.toggle('hidden', !(v==='tingli'||v==='pinyin'||v==='speak'));
@@ -1445,12 +1477,13 @@ function setView(v){
   }
   if(v==='flash' && !flashWord) newFlash();
   if(v==='data') renderData();
+  if(v==='speak') loadWhisper();
 }
 
 /* ---------- events ---------- */
 $$('.mode-btn').forEach(t=> t.onclick=()=>setView(t.dataset.view));
 $('#checkBtn').onclick=check;
-$('#skipBtn').onclick=()=>{ if(isSessionOver()) return; if(mode==='speak'){ stopRecording(); forceStopPlaybackRecording(); } const q=curQ(); if(q) q.consumed=true; newQuestion(); };
+$('#skipBtn').onclick=()=>{ if(isSessionOver()) return; if(mode==='speak') stopRecording(); const q=curQ(); if(q) q.consumed=true; newQuestion(); };
 $('#flashCard').onclick=flip;
 $('#flashCard').setAttribute('tabindex','0');
 $('#flashCard').setAttribute('role','button');
